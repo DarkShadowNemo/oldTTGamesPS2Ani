@@ -22,6 +22,7 @@ def ani_importV2(f):
     keybool=[]
     keyb=[]
     keyboolIndex=-1
+    keyM = []
     version = unpack("<I", f.read(4))[0]
     if version == 2:
         EntrySize = unpack("<I", f.read(4))[0] & 0xFFFF
@@ -38,89 +39,53 @@ def ani_importV2(f):
         bpy.context.scene.frame_current = 1
         bpy.context.scene.frame_start = 1
 
-        for i in range(BoneCount):
-            m1 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m2 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m3 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m4 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m5 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m6 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m7 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m8 = unpack("<I", f.read(4))[0] & 0xFFFF
-            m9 = unpack("<I", f.read(4))[0] & 0xFFFF
+        if BoneCount == 0:
+            pass
 
-        f.seek(EntrySize2-32,0)
-            
+        elif BoneCount:
+            for i in range(BoneCount):
+                m1 = unpack("<H", f.read(2))[0]
+                u1 = unpack("<H", f.read(2))[0]
+                m2 = unpack("<H", f.read(2))[0]
+                u2 = unpack("<H", f.read(2))[0]
+                m3 = unpack("<H", f.read(2))[0]
+                u3 = unpack("<H", f.read(2))[0]
+                m4 = unpack("<H", f.read(2))[0]
+                u4 = unpack("<H", f.read(2))[0]
+                m5 = unpack("<H", f.read(2))[0]
+                u5 = unpack("<H", f.read(2))[0]
+                m6 = unpack("<H", f.read(2))[0]
+                u6 = unpack("<H", f.read(2))[0]
+                m7 = unpack("<H", f.read(2))[0]
+                u7 = unpack("<H", f.read(2))[0]
+                m8 = unpack("<H", f.read(2))[0]
+                u8 = unpack("<H", f.read(2))[0]
+                m9 = unpack("<H", f.read(2))[0]
+                u9 = unpack("<H", f.read(2))[0]
+                keyM.append([m1,u1,m2,u2,m3,u3,m4,u4,m5,u5,m6,u6,m7,u7,m8,u8,m9,u9])
+            for i in range(BoneCount):
+                booleansOnOffKeys1Posx = unpack("B", f.read(1))[0]
+                booleansOnOffKeys2Posy = unpack("B", f.read(1))[0]
+                booleansOnOffKeys3Posz = unpack("B", f.read(1))[0]
+                booleansOnOffKeys4Rotx = unpack("B", f.read(1))[0]
+                booleansOnOffKeys5Roty = unpack("B", f.read(1))[0]
+                booleansOnOffKeys6Rotz = unpack("B", f.read(1))[0]
+                booleansOnOffKeys7Sclx = unpack("B", f.read(1))[0]
+                booleansOnOffKeys8Scly = unpack("B", f.read(1))[0]
+                booleansOnOffKeys9Sclz = unpack("B", f.read(1))[0]
+            for i in range(BoneCount):
+                boneiddd = unpack("B", f.read(1))[0]
 
-        for i in range(BoneCount):
-            booleansOnOffKeys1Posx = unpack("B", f.read(1))[0]
-            booleansOnOffKeys2Posy = unpack("B", f.read(1))[0]
-            booleansOnOffKeys3Posz = unpack("B", f.read(1))[0]
-            booleansOnOffKeys4Rotx = unpack("B", f.read(1))[0]
-            booleansOnOffKeys3Roty = unpack("B", f.read(1))[0]
-            booleansOnOffKeys5Rotz = unpack("B", f.read(1))[0]
-            booleansOnOffKeys6Sclx = unpack("B", f.read(1))[0]
-            booleansOnOffKeys7Scly = unpack("B", f.read(1))[0]
-            booleansOnOffKeys8Sclz = unpack("B", f.read(1))[0]
-
-        f.seek(EntrySize3-32,0)
-        for i in range(BoneCount):
-            unknown01 = unpack("B", f.read(1))[0]
-
-        #WIP have not figure it out yet the rest due to importing
-
+            for i, bidx in enumerate(keyM):
+                if bidx[1] == 8994:
+                    f.seek(bidx[0]-32,0)
+                    print(f.tell())
 
 
 
 
 def ani_exportV2_all_move_non_parser(f):
-    ob = bpy.context.object
-    f.write(pack("<I", 2))
-    f.write(pack("<I", 32))
-    f.write(pack("<I", 44))
-    f.write(pack("<f", bpy.context.scene.frame_end))
-    f.write(pack("<H", len(ob.pose.bones)))
-    f.write(pack("<H", 9))
-    f.write(pack("<I", 1))
-    f.write(pack("<I", 68))
-    f.write(pack("<I", 36*len(ob.pose.bones)+32+36))
-    f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)))
-    for pbone in ob.pose.bones:
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)))
-    for pbone in ob.pose.bones:
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-        f.write(pack("B", 1))
-    for pbone in ob.pose.bones:
-        f.write(pack("B", 35))
-    f.write(pack("<H", 0))
-    for pbone in ob.pose.bones:
-        f.write(pack("<I", 0))
-        f.write(pack("<I", 0))
-        f.write(pack("<I", 36*len(ob.pose.bones)+32+36+9*len(ob.pose.bones)+len(ob.pose.bones)+2+4+4+4+32))
-        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
-            f.write(pack("<f", frame_))
-            f.write(pack("<f", frame_/30))
-            f.write(pack("<f", pbone.head.x))
-            f.write(pack("<f", 0))
-
-            bpy.context.scene.frame_set(frame_)
-
-    #WIP have not figure it out yet the rest due to exporting
+    pass
                 
                 
 
