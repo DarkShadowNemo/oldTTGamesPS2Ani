@@ -25,13 +25,21 @@ class ImportAniAkaAnimation(bpy.types.Operator, ImportHelper):
                 description = 'File path used for finding the ani aka Animation.',
                 type	    = bpy.types.OperatorFileListElement
         )
+        Beta_ani: BoolProperty(
+                name = "beta ani",
+                description = "plays proper animations"
+        )
+        Norm_ani: BoolProperty(
+                name = "normal ani",
+                description = "plays default animation but may get a bit buggy"
+        )
         directory: StringProperty()
         filter_glob: StringProperty(default = '*.ani', options = {'HIDDEN'})
         def execute(self, context):
                 paths = [os.path.join(self.directory, name.name) for name in self.files]
                 if not paths: paths.append(self.filepath)
                 importlib.reload(ani_import_export)
-                for path in paths: ani_import_export.ani_importer_read(path)
+                for path in paths: ani_import_export.ani_importer_read(path, Beta_ani = self.Beta_ani, Norm_ani = self.Norm_ani)
                 return {'FINISHED'}
 
 class ExportAniAkaAnimation(bpy.types.Operator, ExportHelper):
