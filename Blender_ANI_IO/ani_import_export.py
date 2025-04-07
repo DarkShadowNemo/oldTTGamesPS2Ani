@@ -3,173 +3,7 @@ import bpy
 import os
 import mathutils
 import math
-
-def ani_importV2Beta(f):
-    f.seek(0)
-    Chunk = f.read()
-    f.seek(0)
-    version = unpack("<I", f.read(4))[0]
-    
-    if version == 2:
-        ob = bpy.context.object
-        bpy.context.scene.render.fps = 30
-        bpy.context.scene.render.fps_base = 1
-        bpy.context.scene.unit_settings.system_rotation = "RADIANS"
-
-        for pbone in ob.pose.bones:
-            pbone.rotation_mode = "XYZ"
-        boneid=1
-        bones_1=[]
-        bones_2=[]
-        bones_3=[]
-        bones_4=[]
-        bones_5=[]
-        bones_6=[]
-        bones_7=[]
-        bones_8=[]
-        bones_9=[]
-        EntrySize = unpack("<I", f.read(4))[0] & 0xFFFF
-        EntrySize1 = unpack("<I", f.read(4))[0] & 0xFFFF
-        FloatCount = unpack("<f", f.read(4))[0]
-        BoneCount = unpack("<H", f.read(2))[0]
-        offsetCount = unpack("<H", f.read(2))[0]
-        Type1 = unpack("<I", f.read(4))[0]
-        EntrySize2 = unpack("<I", f.read(4))[0] & 0xFFFF
-        EntrySize3 = unpack("<I", f.read(4))[0] & 0xFFFF
-        EntrySize4 = unpack("<I", f.read(4))[0] & 0xFFFF
-        
-        bpy.context.scene.frame_end = int(FloatCount)
-        bpy.context.scene.frame_current = 1
-        bpy.context.scene.frame_start = 1
-        if BoneCount == 0:
-            pass
-        elif BoneCount:
-            for i in range(BoneCount):
-                Size1 = unpack("<H", f.read(2))[0]
-                id1 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid1 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix1 = unpack("<f", f.read(4))[0]
-                Size2 = unpack("<H", f.read(2))[0]
-                id2 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid2 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix2 = unpack("<f", f.read(4))[0]
-                Size3 = unpack("<H", f.read(2))[0]
-                id3 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid3 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix3 = unpack("<f", f.read(4))[0]
-                Size4 = unpack("<H", f.read(2))[0]
-                id4 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid4 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix4 = unpack("<f", f.read(4))[0]
-                Size5 = unpack("<H", f.read(2))[0]
-                id5 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid5 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix5 = unpack("<f", f.read(4))[0]
-                Size6 = unpack("<H", f.read(2))[0]
-                id6 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid6 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix6 = unpack("<f", f.read(4))[0]
-                Size7 = unpack("<H", f.read(2))[0]
-                id7 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid7 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix7 = unpack("<f", f.read(4))[0]
-                Size8 = unpack("<H", f.read(2))[0]
-                id8 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid8 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix8 = unpack("<f", f.read(4))[0]
-                Size9 = unpack("<H", f.read(2))[0]
-                id9 = unpack("<H", f.read(2))[0]
-                f.seek(-4,1)
-                sizeid9 = unpack("<I", f.read(4))[0]
-                f.seek(-4,1)
-                SclMatrix9 = unpack("<f", f.read(4))[0]
-            for k in range(BoneCount):
-                booleanOnOffKeys1Posx = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys2Posy = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys3Posz = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys4Rotx = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys5Roty = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys6Rotz = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys7Sclx = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys8Scly = unpack("B", f.read(1))[0]==True
-                booleanOnOffKeys9Sclz = unpack("B", f.read(1))[0]==True
-                boneid+=1
-                if booleanOnOffKeys1Posx > 0:
-                    bones_1.append(k+k+booleanOnOffKeys1Posx-booleanOnOffKeys1Posx-1+boneid-k-k-1)
-                if booleanOnOffKeys2Posy > 0:
-                    bones_2.append(k+k+booleanOnOffKeys2Posy-booleanOnOffKeys2Posy-1+boneid-k-k-1)
-                if booleanOnOffKeys3Posz > 0:
-                    bones_3.append(k+k+booleanOnOffKeys3Posz-booleanOnOffKeys3Posz-1+boneid-k-k-1)
-                if booleanOnOffKeys4Rotx > 0:
-                    bones_4.append(k+k+booleanOnOffKeys4Rotx-booleanOnOffKeys4Rotx-1+boneid-k-k-1)
-                if booleanOnOffKeys5Roty > 0:
-                    bones_5.append(k+k+booleanOnOffKeys5Roty-booleanOnOffKeys5Roty-1+boneid-k-k-1)
-                if booleanOnOffKeys6Rotz > 0:
-                    bones_6.append(k+k+booleanOnOffKeys6Rotz-booleanOnOffKeys6Rotz-1+boneid-k-k-1)
-                if booleanOnOffKeys7Sclx > 0:
-                    bones_7.append(k+k+booleanOnOffKeys7Sclx-booleanOnOffKeys7Sclx-1+boneid-k-k-1)
-                if booleanOnOffKeys8Scly > 0:
-                    bones_8.append(k+k+booleanOnOffKeys8Scly-booleanOnOffKeys8Scly-1+boneid-k-k-1)
-                if booleanOnOffKeys9Sclz > 0:
-                    bones_9.append(k+k+booleanOnOffKeys9Sclz-booleanOnOffKeys9Sclz-1+boneid-k-k-1)
-            for i in range(BoneCount):
-                boneidd = unpack("B", f.read(1))[0]
-
-            pad01 = unpack("<H", f.read(2))[0]
-            if pad01 != 0:
-                f.seek(-2,1)
-                if Type1 == 1:
-                    size10 = unpack("<H", f.read(2))[0]
-                    f.seek(10,1)
-                    for bone1 in bones_2:
-                        while f.tell() < size10:
-                            if bone1 == 0:
-                                floatcount1 = unpack("<f", f.read(4))[0]
-                                framerate = unpack("<f", f.read(4))[0]
-                                posy1 = unpack("<f", f.read(4))[0]
-                                unk = unpack("<f", f.read(4))[0]
-                                ob.pose.bones[bone1].location.y = posy1
-                                ob.pose.bones[bone1].keyframe_insert(data_path="location", index=1, frame=int(floatcount1))
-                                ob.pose.bones[bone1].keyframe_delete("location", index=1, frame=0)
-                            elif bone1 == 1:
-                                floatcount1 = unpack("<f", f.read(4))[0]
-                                framerate = unpack("<f", f.read(4))[0]
-                                posy1 = unpack("<f", f.read(4))[0]
-                                unk = unpack("<f", f.read(4))[0]
-                                ob.pose.bones[bone1].location.y = posy1
-                                ob.pose.bones[bone1].keyframe_insert(data_path="location", index=1, frame=int(floatcount1))
-                                ob.pose.bones[bone1].keyframe_delete("location", index=1, frame=0)
-                            elif bone1 == 2:
-                                floatcount1 = unpack("<f", f.read(4))[0]
-                                framerate = unpack("<f", f.read(4))[0]
-                                posy1 = unpack("<f", f.read(4))[0]
-                                unk = unpack("<f", f.read(4))[0]
-                                ob.pose.bones[bone1].location.y = posy1
-                                ob.pose.bones[bone1].keyframe_insert(data_path="location", index=1, frame=int(floatcount1))
-                                ob.pose.bones[bone1].keyframe_delete("location", index=1, frame=0)
                                 
-                                
-        
-    
-        
-        
-
 def ani_importV2(f):
     ob = bpy.context.object
     bpy.context.scene.render.fps = 30
@@ -179,13 +13,23 @@ def ani_importV2(f):
     for pbone in ob.pose.bones:
         pbone.rotation_mode = "XYZ"
 
+    bones_1=[]
+    bones_2=[]
+    bones_3=[]
+    bones_4=[]
+    bones_5=[]
+    bones_6=[]
+    bones_7=[]
+    bones_8=[]
+    bones_9=[]
+
     keyframes_=[]
     bones_=[]
     f.seek(0)
     Chunk = f.read()
     f.seek(0)
     boneid=-1
-    boneid1=0
+    boneid1=1
     keybool=[]
     keybool2=[]
     keybool3=[]
@@ -304,6 +148,25 @@ def ani_importV2(f):
                 keybool7.append([booleanOnOffKeys7Sclx])
                 keybool8.append([booleanOnOffKeys8Scly])
                 keybool9.append([booleanOnOffKeys9Sclz])
+                boneid1+=1
+                if booleanOnOffKeys1Posx > 0:
+                    bones_1.append(k+k+booleanOnOffKeys1Posx-booleanOnOffKeys1Posx-1+boneid1-k-k-1)
+                if booleanOnOffKeys2Posy > 0:
+                    bones_2.append(k+k+booleanOnOffKeys2Posy-booleanOnOffKeys2Posy-1+boneid1-k-k-1)
+                if booleanOnOffKeys3Posz > 0:
+                    bones_3.append(k+k+booleanOnOffKeys3Posz-booleanOnOffKeys3Posz-1+boneid1-k-k-1)
+                if booleanOnOffKeys4Rotx > 0:
+                    bones_4.append(k+k+booleanOnOffKeys4Rotx-booleanOnOffKeys4Rotx-1+boneid1-k-k-1)
+                if booleanOnOffKeys5Roty > 0:
+                    bones_5.append(k+k+booleanOnOffKeys5Roty-booleanOnOffKeys5Roty-1+boneid1-k-k-1)
+                if booleanOnOffKeys6Rotz > 0:
+                    bones_6.append(k+k+booleanOnOffKeys6Rotz-booleanOnOffKeys6Rotz-1+boneid1-k-k-1)
+                if booleanOnOffKeys7Sclx > 0:
+                    bones_7.append(k+k+booleanOnOffKeys7Sclx-booleanOnOffKeys7Sclx-1+boneid1-k-k-1)
+                if booleanOnOffKeys8Scly > 0:
+                    bones_8.append(k+k+booleanOnOffKeys8Scly-booleanOnOffKeys8Scly-1+boneid1-k-k-1)
+                if booleanOnOffKeys9Sclz > 0:
+                    bones_9.append(k+k+booleanOnOffKeys9Sclz-booleanOnOffKeys9Sclz-1+boneid1-k-k-1)
                 """boneid+=1
                 if booleanOnOffKeys2Posy > 0:
                     bones_.append(k+k+booleanOnOffKeys2Posy-booleanOnOffKeys2Posy-1+boneid-k-k-1)
@@ -1301,7 +1164,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].keyframe_insert(data_path="scale", index=2, frame=int(FloatCount))
 
                 elif Type1 == 2:
-                    if bidx[1] == 7655 or bidx[1] == 10239 or bidx[1] == 9890 or bidx[1] == 7530 or bidx[1] == 7584 or bidx[1] == 9143 or bidx[1] == 9831 or bidx[1] == 12647 or bidx[1] == 9181 or bidx[1] == 9012 or bidx[1] == 10280 or bidx[1] == 8071 or bidx[1] == 5065 or bidx[1] == 11560 or bidx[1] == 8871 or bidx[1] == 7168:
+                    if bidx[1] == 7655 or bidx[1] == 10239 or bidx[1] == 9890 or bidx[1] == 7530 or bidx[1] == 7584 or bidx[1] == 9143 or bidx[1] == 9831 or bidx[1] == 12647 or bidx[1] == 9181 or bidx[1] == 9012 or bidx[1] == 10280 or bidx[1] == 8071 or bidx[1] == 5065 or bidx[1] == 11560 or bidx[1] == 8871 or bidx[1] == 7168 or bidx[1] == 9517:
                         f.seek(bidx[0]-32,0)
                         EntrySizeA = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1319,7 +1182,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].location.x = posx
                             ob.pose.bones[boneid].keyframe_insert(data_path="location", index=0, frame=int(FloatCount))
 
-                    elif bidx[3] == 7655 or bidx[3] == 10239 or bidx[3] == 9890 or bidx[3] == 7530 or bidx[3] == 7584 or bidx[3] == 9143 or bidx[3] == 9831 or bidx[3] == 12647 or bidx[3] == 9181 or bidx[3] == 9012 or bidx[3] == 10280 or bidx[3] == 8071 or bidx[3] == 5065 or bidx[3] == 11560 or bidx[3] == 8871 or bidx[3] == 7168:
+                    elif bidx[3] == 7655 or bidx[3] == 10239 or bidx[3] == 9890 or bidx[3] == 7530 or bidx[3] == 7584 or bidx[3] == 9143 or bidx[3] == 9831 or bidx[3] == 12647 or bidx[3] == 9181 or bidx[3] == 9012 or bidx[3] == 10280 or bidx[3] == 8071 or bidx[3] == 5065 or bidx[3] == 11560 or bidx[3] == 8871 or bidx[3] == 7168 or bidx[3] == 9517:
                         f.seek(bidx[2]-32,0)
                         EntrySizeD = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1337,7 +1200,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].location.y = posy
                             ob.pose.bones[boneid].keyframe_insert(data_path="location", index=1, frame=int(FloatCount))
 
-                    elif bidx[5] == 7655 or bidx[5] == 10239 or bidx[5] == 9890 or bidx[5] == 7530 or bidx[5] == 7584 or bidx[5] == 9143 or bidx[5] == 9831 or bidx[5] == 12647 or bidx[5] == 9181 or bidx[5] == 9012 or bidx[5] == 10280 or bidx[5] == 8071 or bidx[5] == 5065 or bidx[5] == 11560 or bidx[5] == 8871 or bidx[5] == 7168:
+                    elif bidx[5] == 7655 or bidx[5] == 10239 or bidx[5] == 9890 or bidx[5] == 7530 or bidx[5] == 7584 or bidx[5] == 9143 or bidx[5] == 9831 or bidx[5] == 12647 or bidx[5] == 9181 or bidx[5] == 9012 or bidx[5] == 10280 or bidx[5] == 8071 or bidx[5] == 5065 or bidx[5] == 11560 or bidx[5] == 8871 or bidx[5] == 7168 or bidx[5] == 9517:
                         f.seek(bidx[4]-32,0)
                         EntrySizeG = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1355,7 +1218,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].location.z = posz
                             ob.pose.bones[boneid].keyframe_insert(data_path="location", index=2, frame=int(FloatCount))
 
-                    elif bidx[7] == 7655 or bidx[7] == 10239 or bidx[7] == 9890 or bidx[7] == 7530 or bidx[7] == 7584 or bidx[7] == 9143 or bidx[7] == 9831 or bidx[7] == 12647 or bidx[7] == 9181 or bidx[7] == 9012 or bidx[7] == 10280 or bidx[7] == 8071 or bidx[7] == 5065 or bidx[7] == 11560 or bidx[7] == 8871 or bidx[7] == 7168:
+                    elif bidx[7] == 7655 or bidx[7] == 10239 or bidx[7] == 9890 or bidx[7] == 7530 or bidx[7] == 7584 or bidx[7] == 9143 or bidx[7] == 9831 or bidx[7] == 12647 or bidx[7] == 9181 or bidx[7] == 9012 or bidx[7] == 10280 or bidx[7] == 8071 or bidx[7] == 5065 or bidx[7] == 11560 or bidx[7] == 8871 or bidx[7] == 7168 or bidx[7] == 9517:
                         f.seek(bidx[6]-32,0)
                         EntrySizeJ = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1373,7 +1236,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].rotation_euler.x = rotx
                             ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=0, frame=int(FloatCount))
 
-                    elif bidx[9] == 7655 or bidx[9] == 10239 or bidx[9] == 9890 or bidx[9] == 7530 or bidx[9] == 7584 or bidx[9] == 9143 or bidx[9] == 9831 or bidx[9] == 12647 or bidx[9] == 9181 or bidx[9] == 9012 or bidx[9] == 10280 or bidx[9] == 8071 or bidx[9] == 5065 or bidx[9] == 11560 or bidx[9] == 8871 or bidx[9] == 7168:
+                    elif bidx[9] == 7655 or bidx[9] == 10239 or bidx[9] == 9890 or bidx[9] == 7530 or bidx[9] == 7584 or bidx[9] == 9143 or bidx[9] == 9831 or bidx[9] == 12647 or bidx[9] == 9181 or bidx[9] == 9012 or bidx[9] == 10280 or bidx[9] == 8071 or bidx[9] == 5065 or bidx[9] == 11560 or bidx[9] == 8871 or bidx[9] == 7168 or bidx[9] == 9517:
                         f.seek(bidx[8]-32,0)
                         EntrySizeM = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1391,7 +1254,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].rotation_euler.y = roty
                             ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=1, frame=int(FloatCount))
 
-                    elif bidx[11] == 7655 or bidx[11] == 10239 or bidx[11] == 9890 or bidx[11] == 7530 or bidx[11] == 7584 or bidx[11] == 9143 or bidx[11] == 9831 or bidx[11] == 12647 or bidx[11] == 9181 or bidx[11] == 9012 or bidx[11] == 10280 or bidx[11] == 8071 or bidx[11] == 5065 or bidx[11] == 11560 or bidx[11] == 8871 or bidx[11] == 7168:
+                    elif bidx[11] == 7655 or bidx[11] == 10239 or bidx[11] == 9890 or bidx[11] == 7530 or bidx[11] == 7584 or bidx[11] == 9143 or bidx[11] == 9831 or bidx[11] == 12647 or bidx[11] == 9181 or bidx[11] == 9012 or bidx[11] == 10280 or bidx[11] == 8071 or bidx[11] == 5065 or bidx[11] == 11560 or bidx[11] == 8871 or bidx[11] == 7168 or bidx[11] == 9517:
                         f.seek(bidx[10]-32,0)
                         EntrySizeP = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1409,7 +1272,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].rotation_euler.z = rotz
                             ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=2, frame=int(FloatCount))
 
-                    elif bidx[13] == 7655 or bidx[13] == 10239 or bidx[13] == 9890 or bidx[13] == 7530 or bidx[13] == 7584 or bidx[13] == 9143 or bidx[13] == 9831 or bidx[13] == 12647 or bidx[13] == 9181 or bidx[13] == 9012 or bidx[13] == 10280 or bidx[13] == 8071 or bidx[13] == 5065 or bidx[13] == 11560 or bidx[13] == 8871 or bidx[13] == 7168:
+                    elif bidx[13] == 7655 or bidx[13] == 10239 or bidx[13] == 9890 or bidx[13] == 7530 or bidx[13] == 7584 or bidx[13] == 9143 or bidx[13] == 9831 or bidx[13] == 12647 or bidx[13] == 9181 or bidx[13] == 9012 or bidx[13] == 10280 or bidx[13] == 8071 or bidx[13] == 5065 or bidx[13] == 11560 or bidx[13] == 8871 or bidx[13] == 7168 or bidx[13] == 9517:
                         f.seek(bidx[12]-32,0)
                         EntrySizeS = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1427,7 +1290,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].scale.x = sclx
                             ob.pose.bones[boneid].keyframe_insert(data_path="location", index=0, frame=int(FloatCount))
 
-                    elif bidx[15] == 7655 or bidx[15] == 10239 or bidx[15] == 9890 or bidx[15] == 7530 or bidx[15] == 7584 or bidx[15] == 9143 or bidx[15] == 9831 or bidx[15] == 12647 or bidx[15] == 9181 or bidx[15] == 9012 or bidx[15] == 10280 or bidx[15] == 8071 or bidx[15] == 5065 or bidx[15] == 11560 or bidx[15] == 8871 or bidx[15] == 7168:
+                    elif bidx[15] == 7655 or bidx[15] == 10239 or bidx[15] == 9890 or bidx[15] == 7530 or bidx[15] == 7584 or bidx[15] == 9143 or bidx[15] == 9831 or bidx[15] == 12647 or bidx[15] == 9181 or bidx[15] == 9012 or bidx[15] == 10280 or bidx[15] == 8071 or bidx[15] == 5065 or bidx[15] == 11560 or bidx[15] == 8871 or bidx[15] == 7168 or bidx[15] == 9517:
                         f.seek(bidx[14]-32,0)
                         EntrySizeV = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1445,7 +1308,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].scale.y = scly
                             ob.pose.bones[boneid].keyframe_insert(data_path="scale", index=1, frame=int(FloatCount))
 
-                    elif bidx[17] == 7655 or bidx[17] == 10239 or bidx[17] == 9890 or bidx[17] == 7530 or bidx[17] == 7584 or bidx[17] == 9143 or bidx[17] == 9831 or bidx[17] == 12647 or bidx[17] == 9181 or bidx[17] == 9012 or bidx[17] == 10280 or bidx[17] == 8071 or bidx[17] == 5065 or bidx[17] == 11560 or bidx[17] == 8871 or bidx[17] == 7168:
+                    elif bidx[17] == 7655 or bidx[17] == 10239 or bidx[17] == 9890 or bidx[17] == 7530 or bidx[17] == 7584 or bidx[17] == 9143 or bidx[17] == 9831 or bidx[17] == 12647 or bidx[17] == 9181 or bidx[17] == 9012 or bidx[17] == 10280 or bidx[17] == 8071 or bidx[17] == 5065 or bidx[17] == 11560 or bidx[17] == 8871 or bidx[17] == 7168 or bidx[17] == 9517:
                         f.seek(bidx[16]-32,0)
                         EntrySizeY = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1464,25 +1327,28 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].keyframe_insert(data_path="scale", index=2, frame=int(FloatCount))
                             
                 elif Type1 == 1:
-                    if bidx[1] == 8994 or bidx[1] == 9442 or bidx[1] == 8871 or bidx[1] == 9440 or bidx[1] == 9450 or bidx[1] == 8796 or bidx[1] == 9417 or bidx[1] == 9335 or bidx[1] == 14507 or bidx[1] == 6207 or bidx[1] == 8316 or bidx[1] == 9457 or bidx[1] == 10280 or bidx[1] == 9012 or bidx[1] == 11271 or bidx[1] == 7773 or bidx[1] == 10563 or bidx[1] == 7722:
+                    if bidx[1] == 8994 or bidx[1] == 9442 or bidx[1] == 8871 or bidx[1] == 9440 or bidx[1] == 9450 or bidx[1] == 8796 or bidx[1] == 9417 or bidx[1] == 9335 or bidx[1] == 14507 or bidx[1] == 6207 or bidx[1] == 8316 or bidx[1] == 9457 or bidx[1] == 10280 or bidx[1] == 9012 or bidx[1] == 11271 or bidx[1] == 7773 or bidx[1] == 10563 or bidx[1] == 7722 or bidx[1] == 9582 or bidx[1] == 7733:
+                        BCount1 = 36*BoneCount
+                        BOffset1 = 9*BoneCount
+
                         f.seek(bidx[0]-32,0)
                         EntrySizeA = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
-                        EntrySizeB = unpack("<H", f.read(2))[0]-32
+                        EntrySizeB = unpack("<H", f.read(2))[0]
                         f.seek(2,1)
-                        EntrySizeC = unpack("<H", f.read(2))[0]-32
+                        EntrySizeC = unpack("<H", f.read(2))[0]
                         f.seek(2,1)
                         while f.tell() < EntrySizeA:
                             FloatCount = unpack("<f", f.read(4))[0]
                             framerate = unpack("<f", f.read(4))[0]
                             posx = unpack("<f", f.read(4))[0]# / 10
                             unk = unpack("<f", f.read(4))[0]
-                            if FloatCount == 1:
-                                boneid+=1
-                            ob.pose.bones[boneid].location.x = posx
-                            ob.pose.bones[boneid].keyframe_insert(data_path="location", index=0, frame=int(FloatCount))
+                        unknown01 = unpack("<I", f.read(4))[0]
+                        padding01 = unpack("<I", f.read(4))[0]
                             
-                    elif bidx[3] == 8994 or bidx[3] == 9442 or bidx[3] == 8871 or bidx[3] == 9440 or bidx[3] == 9450 or bidx[3] == 8796 or bidx[3] == 9417 or bidx[3] == 9335 or bidx[3] == 14507 or bidx[3] == 6207 or bidx[3] == 8316 or bidx[3] == 9457 or bidx[3] == 10280 or bidx[3] == 9012 or bidx[3] == 11271 or bidx[3] == 7773 or bidx[3] == 10563 or bidx[3] == 7722:
+                    elif bidx[3] == 8994 or bidx[3] == 9442 or bidx[3] == 8871 or bidx[3] == 9440 or bidx[3] == 9450 or bidx[3] == 8796 or bidx[3] == 9417 or bidx[3] == 9335 or bidx[3] == 14507 or bidx[3] == 6207 or bidx[3] == 8316 or bidx[3] == 9457 or bidx[3] == 10280 or bidx[3] == 9012 or bidx[3] == 11271 or bidx[3] == 7773 or bidx[3] == 10563 or bidx[3] == 7722 or bidx[3] == 9582 or bidx[3] == 7733:
+
+
                         f.seek(bidx[2]-32,0)
                         EntrySizeD = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1490,17 +1356,29 @@ def ani_importV2(f):
                         f.seek(2,1)
                         EntrySizeF = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
-                        while f.tell() < EntrySizeD:
-                            FloatCount = unpack("<f", f.read(4))[0]
-                            framerate = unpack("<f", f.read(4))[0]
-                            posy = unpack("<f", f.read(4))[0]# / 10
-                            unk = unpack("<f", f.read(4))[0]
-                            if FloatCount == 1:
-                                boneid+=1
-                            ob.pose.bones[boneid].location.y = posy
-                            ob.pose.bones[boneid].keyframe_insert(data_path="location", index=1, frame=int(FloatCount))
+
+                        if EntrySizeD == 3684:
+                            while f.tell() < 3684:
+                                FloatCount = unpack("<f", f.read(4))[0]
+                                framerate = unpack("<f", f.read(4))[0]
+                                posy = unpack("<f", f.read(4))[0]# / 10
+                                unk = unpack("<f", f.read(4))[0]
+                                for bone1 in bones_2:
+                                    if bone1 == 0:
+                                        ob.pose.bones[0].location.y = posy
+                                        ob.pose.bones[0].keyframe_insert(data_path="location", index=1, frame=int(FloatCount))
+                                        
+
+                                    
+                        """unknown01 = unpack("<I", f.read(4))[0]
+                        padding01 = unpack("<I", f.read(4))[0]
+                        if padding01 == 0:
+                            for bone1 in bones_2:
+                                if bone1 == 0:
+                                    ob.pose.bones[0].location.z = posy
+                                    ob.pose.bones[0].keyframe_insert(data_path="location", index=2, frame=int(FloatCount))"""
                             
-                    elif bidx[5] == 8994 or bidx[5] == 9442 or bidx[5] == 8871 or bidx[5] == 9440 or bidx[5] == 9450 or bidx[5] == 8796 or bidx[5] == 9417 or bidx[5] == 9335 or bidx[5] == 14507 or bidx[5] == 6207 or bidx[5] == 8316 or bidx[5] == 9457 or bidx[5] == 10280 or bidx[5] == 9012 or bidx[5] == 11271 or bidx[5] == 7773 or bidx[5] == 10563 or bidx[5] == 7722:
+                    elif bidx[5] == 8994 or bidx[5] == 9442 or bidx[5] == 8871 or bidx[5] == 9440 or bidx[5] == 9450 or bidx[5] == 8796 or bidx[5] == 9417 or bidx[5] == 9335 or bidx[5] == 14507 or bidx[5] == 6207 or bidx[5] == 8316 or bidx[5] == 9457 or bidx[5] == 10280 or bidx[5] == 9012 or bidx[5] == 11271 or bidx[5] == 7773 or bidx[5] == 10563 or bidx[5] == 7722 or bidx[5] == 9582 or bidx[5] == 7733:
                         f.seek(bidx[4]-32,0)
                         EntrySizeG = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1513,13 +1391,11 @@ def ani_importV2(f):
                             framerate = unpack("<f", f.read(4))[0]
                             posz = unpack("<f", f.read(4))[0]# / 10
                             unk = unpack("<f", f.read(4))[0]
-                            if FloatCount == 1:
-                                boneid+=1
-                            ob.pose.bones[boneid].location.z = posz
-                            ob.pose.bones[boneid].keyframe_insert(data_path="location", index=2, frame=int(FloatCount))
+                        unknown01 = unpack("<I", f.read(4))[0]
+                        padding01 = unpack("<I", f.read(4))[0]
                             
                             
-                    elif bidx[7] == 8994 or bidx[7] == 9442 or bidx[7] == 8871 or bidx[7] == 9440 or bidx[7] == 9450 or bidx[7] == 8796 or bidx[7] == 9417 or bidx[7] == 9335 or bidx[7] == 14507 or bidx[7] == 6207 or bidx[7] == 8316 or bidx[7] == 9457 or bidx[7] == 10280 or bidx[7] == 9012 or bidx[7] == 11271 or bidx[7] == 7773 or bidx[7] == 10563 or bidx[7] == 7722:
+                    elif bidx[7] == 8994 or bidx[7] == 9442 or bidx[7] == 8871 or bidx[7] == 9440 or bidx[7] == 9450 or bidx[7] == 8796 or bidx[7] == 9417 or bidx[7] == 9335 or bidx[7] == 14507 or bidx[7] == 6207 or bidx[7] == 8316 or bidx[7] == 9457 or bidx[7] == 10280 or bidx[7] == 9012 or bidx[7] == 11271 or bidx[7] == 7773 or bidx[7] == 10563 or bidx[7] == 7722 or bidx[7] == 9582 or bidx[7] == 7733:
                         f.seek(bidx[6]-32,0)
                         EntrySizeJ = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1530,14 +1406,14 @@ def ani_importV2(f):
                         while f.tell() < EntrySizeJ:
                             FloatCount = unpack("<f", f.read(4))[0]
                             framerate = unpack("<f", f.read(4))[0]
-                            rotx = -unpack("<f", f.read(4))[0]# / 10
+                            rotx = -unpack("<f", f.read(4))[0] / 10
                             unk = unpack("<f", f.read(4))[0]
                             if FloatCount == 1:
                                 boneid+=1
-                            ob.pose.bones[boneid].rotation_euler.x = rotx
-                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=0, frame=int(FloatCount))
+                            ob.pose.bones[boneid].rotation_euler.y = rotx
+                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=1, frame=int(FloatCount))
                             
-                    elif bidx[9] == 8994 or bidx[9] == 9442 or bidx[9] == 8871 or bidx[9] == 9440 or bidx[9] == 9450 or bidx[9] == 8796 or bidx[9] == 9417 or bidx[9] == 9335 or bidx[9] == 14507 or bidx[9] == 6207 or bidx[9] == 8316 or bidx[9] == 9457 or bidx[9] == 10280 or bidx[9] == 9012 or bidx[9] == 11271 or bidx[9] == 7773 or bidx[9] == 10563 or bidx[9] == 7722:
+                    elif bidx[9] == 8994 or bidx[9] == 9442 or bidx[9] == 8871 or bidx[9] == 9440 or bidx[9] == 9450 or bidx[9] == 8796 or bidx[9] == 9417 or bidx[9] == 9335 or bidx[9] == 14507 or bidx[9] == 6207 or bidx[9] == 8316 or bidx[9] == 9457 or bidx[9] == 10280 or bidx[9] == 9012 or bidx[9] == 11271 or bidx[9] == 7773 or bidx[9] == 10563 or bidx[9] == 7722 or bidx[9] == 9582 or bidx[9] == 7733:
                         f.seek(bidx[8]-32,0)
                         EntrySizeM = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1548,14 +1424,14 @@ def ani_importV2(f):
                         while f.tell() < EntrySizeM:
                             FloatCount = unpack("<f", f.read(4))[0]
                             framerate = unpack("<f", f.read(4))[0]
-                            roty = -unpack("<f", f.read(4))[0]# / 10
+                            roty = -unpack("<f", f.read(4))[0] / 10
                             unk = unpack("<f", f.read(4))[0]
                             if FloatCount == 1:
                                 boneid+=1
-                            ob.pose.bones[boneid].rotation_euler.y = roty
-                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=1, frame=int(FloatCount))
+                            ob.pose.bones[boneid].rotation_euler.z = roty
+                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=2, frame=int(FloatCount))
                             
-                    elif bidx[11] == 8994 or bidx[11] == 9442 or bidx[11] == 8871 or bidx[11] == 9440 or bidx[11] == 9450 or bidx[11] == 8796 or bidx[11] == 9417 or bidx[11] == 9335 or bidx[11] == 14507 or bidx[11] == 6207 or bidx[11] == 8316 or bidx[11] == 9457 or bidx[11] == 10280 or bidx[11] == 9012 or bidx[11] == 11271 or bidx[11] == 7773 or bidx[11] == 10563 or bidx[11] == 7722:
+                    elif bidx[11] == 8994 or bidx[11] == 9442 or bidx[11] == 8871 or bidx[11] == 9440 or bidx[11] == 9450 or bidx[11] == 8796 or bidx[11] == 9417 or bidx[11] == 9335 or bidx[11] == 14507 or bidx[11] == 6207 or bidx[11] == 8316 or bidx[11] == 9457 or bidx[11] == 10280 or bidx[11] == 9012 or bidx[11] == 11271 or bidx[11] == 7773 or bidx[11] == 10563 or bidx[11] == 7722 or bidx[11] == 9582 or bidx[11] == 7733:
                         f.seek(bidx[10]-32,0)
                         EntrySizeP = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1566,14 +1442,14 @@ def ani_importV2(f):
                         while f.tell() < EntrySizeP:
                             FloatCount = unpack("<f", f.read(4))[0]
                             framerate = unpack("<f", f.read(4))[0]
-                            rotz = -unpack("<f", f.read(4))[0]# / 10
+                            rotz = -unpack("<f", f.read(4))[0] / 10
                             unk = unpack("<f", f.read(4))[0]
                             if FloatCount == 1:
                                 boneid+=1
-                            ob.pose.bones[boneid].rotation_euler.z = rotz
-                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=2, frame=int(FloatCount))
+                            ob.pose.bones[boneid].rotation_euler.x = rotz
+                            ob.pose.bones[boneid].keyframe_insert(data_path="rotation_euler", index=0, frame=int(FloatCount))
                             
-                    elif bidx[13] == 8994 or bidx[13] == 9442 or bidx[13] == 8871 or bidx[13] == 9440 or bidx[13] == 9450 or bidx[13] == 8796 or bidx[13] == 9417 or bidx[13] == 9335 or bidx[13] == 14507 or bidx[13] == 6207 or bidx[13] == 8316 or bidx[13] == 9457 or bidx[13] == 10280 or bidx[13] == 9012 or bidx[13] == 11271 or bidx[13] == 7773 or bidx[13] == 10563 or bidx[13] == 7722:
+                    elif bidx[13] == 8994 or bidx[13] == 9442 or bidx[13] == 8871 or bidx[13] == 9440 or bidx[13] == 9450 or bidx[13] == 8796 or bidx[13] == 9417 or bidx[13] == 9335 or bidx[13] == 14507 or bidx[13] == 6207 or bidx[13] == 8316 or bidx[13] == 9457 or bidx[13] == 10280 or bidx[13] == 9012 or bidx[13] == 11271 or bidx[13] == 7773 or bidx[13] == 10563 or bidx[13] == 7722 or bidx[13] == 9582 or bidx[13] == 7733:
                         f.seek(bidx[12]-32,0)
                         EntrySizeS = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1591,7 +1467,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].scale.x = sclx
                             ob.pose.bones[boneid].keyframe_insert(data_path="scale", index=0, frame=int(FloatCount))
                             
-                    elif bidx[15] == 8994 or bidx[15] == 9442 or bidx[15] == 8871 or bidx[15] == 9440 or bidx[15] == 9450 or bidx[15] == 8796 or bidx[15] == 9417 or bidx[15] == 9335 or bidx[15] == 14507 or bidx[15] == 6207 or bidx[15] == 8316 or bidx[15] == 9457 or bidx[15] == 10280 or bidx[15] == 9012 or bidx[15] == 11271 or bidx[15] == 7773 or bidx[15] == 10563 or bidx[15] == 7722:
+                    elif bidx[15] == 8994 or bidx[15] == 9442 or bidx[15] == 8871 or bidx[15] == 9440 or bidx[15] == 9450 or bidx[15] == 8796 or bidx[15] == 9417 or bidx[15] == 9335 or bidx[15] == 14507 or bidx[15] == 6207 or bidx[15] == 8316 or bidx[15] == 9457 or bidx[15] == 10280 or bidx[15] == 9012 or bidx[15] == 11271 or bidx[15] == 7773 or bidx[15] == 10563 or bidx[15] == 7722 or bidx[15] == 9582 or bidx[15] == 7733:
                         f.seek(bidx[14]-32,0)
                         EntrySizeV = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1609,7 +1485,7 @@ def ani_importV2(f):
                             ob.pose.bones[boneid].scale.y = scly
                             ob.pose.bones[boneid].keyframe_insert(data_path="scale", index=1, frame=int(FloatCount))
                             
-                    elif bidx[17] == 8994 or bidx[17] == 9442 or bidx[17] == 8871 or bidx[17] == 9440 or bidx[17] == 9450 or bidx[17] == 8796 or bidx[17] == 9417 or bidx[17] == 9335 or bidx[17] == 14507 or bidx[17] == 6207 or bidx[17] == 8316 or bidx[17] == 9457 or bidx[17] == 10280 or bidx[17] == 9012 or bidx[17] == 11271 or bidx[17] == 7773 or bidx[17] == 10563 or bidx[17] == 7722:
+                    elif bidx[17] == 8994 or bidx[17] == 9442 or bidx[17] == 8871 or bidx[17] == 9440 or bidx[17] == 9450 or bidx[17] == 8796 or bidx[17] == 9417 or bidx[17] == 9335 or bidx[17] == 14507 or bidx[17] == 6207 or bidx[17] == 8316 or bidx[17] == 9457 or bidx[17] == 10280 or bidx[17] == 9012 or bidx[17] == 11271 or bidx[17] == 7773 or bidx[17] == 10563 or bidx[17] == 7722 or bidx[17] == 9582 or bidx[17] == 7733:
                         f.seek(bidx[16]-32,0)
                         EntrySizeY = unpack("<H", f.read(2))[0]-32
                         f.seek(2,1)
@@ -1630,10 +1506,166 @@ def ani_importV2(f):
 
 
 
-def ani_exportV2_all_move_non_parser(f):
+def ani_exportV2_all_move_non_parser_locrotscl(f):
+    ob = bpy.context.object
+    index1=0
+    ExtrIndex=2
+    divideIndex=-1
+    index_=1
+    frameratess=1
+    frameEndIndex=0
+    frameEndIndex2=0
+    frameratess=1
     f.write(pack("<I", 2))
     f.write(pack("<I", 32))
-                
+    f.write(pack("<I", 44))
+    f.write(pack("<f", bpy.context.scene.frame_end))
+    f.write(pack("<H", len(ob.pose.bones)))
+    f.write(pack("<H", 9))
+    f.write(pack("<I", 1))
+    f.write(pack("<I", 68))
+    f.write(pack("<I", 36+36*len(ob.pose.bones)+32))
+    f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+32))
+    for pbone in ob.pose.bones:
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+12+16*bpy.context.scene.frame_end+8+frameEndIndex))
+        frameEndIndex+=12+16*bpy.context.scene.frame_end+8+32*9
+        if pbone.scale.x:
+            f.write(pack("<f", 1))
+        if pbone.scale.y:
+            f.write(pack("<f", 1))
+        if pbone.scale.z:
+            f.write(pack("<f", 1))
+    for pbone in ob.pose.bones:
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+        f.write(pack("B", 1))
+    for pbone in ob.pose.bones:
+        f.write(pack("B", 35))
+
+    for pbone in ob.pose.bones:
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.location.x))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.location.z))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.location.y))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", -pbone.rotation_euler.y))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", -pbone.rotation_euler.z))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", -pbone.rotation_euler.y))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.scale.x))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.scale.y))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+16*bpy.context.scene.frame_end+32*2))
+        f.write(pack("<I", 36+36*len(ob.pose.bones)+9*len(ob.pose.bones)+1*len(ob.pose.bones)+12+32))
+        for frame_ in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end+1):
+            f.write(pack("<f", frame_))
+            f.write(pack("<f", frame_/30))
+            f.write(pack("<f", pbone.scale.z))
+            f.write(pack("<f", 0))
+
+        f.write(pack("<I", 131073))
+        f.write(pack("<I", 0))
+                                 
+        
 def ani_importer_read(filepath, Beta_ani=False, Norm_ani=False):
     with open(filepath,"rb") as f:
         if Norm_ani:
