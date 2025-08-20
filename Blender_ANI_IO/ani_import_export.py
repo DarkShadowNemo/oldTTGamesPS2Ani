@@ -5290,7 +5290,576 @@ def ani_importV2(f):
                     ob.pose.bones[7].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
         elif BoneCount == 9:
-            pass
+            posxOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn36 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn37 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn38 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn39 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn40 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn41 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn32 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn42 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn43 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn44 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            booleanPX1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            if booleanPX1zzzzzzzzzzz > 0:
+                f.seek(posxOn36,0)
+                f.seek(-32,1)
+                Size946 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size947 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size948 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size946:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.x = posx35
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzz > 0:
+                f.seek(posyOn36,0)
+                f.seek(-32,1)
+                Size949 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size950 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size951 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size949:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.y = posy35
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzz > 0:
+                f.seek(poszOn36,0)
+                f.seek(-32,1)
+                Size952 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size953 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size954 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size952:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.z = posz35
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzz > 0:
+                f.seek(rotxOn36,0)
+                f.seek(-32,1)
+                Size955 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size956 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size957 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size955:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx35 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.x = rotx35
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzz > 0:
+                f.seek(rotyOn36,0)
+                f.seek(-32,1)
+                Size958 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size959 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size960 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size958:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz35 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.z = rotz35
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzz > 0:
+                f.seek(rotzOn36,0)
+                f.seek(-32,1)
+                Size961 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size962 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size963 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size961:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty35 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.y = roty35
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzz > 0:
+                f.seek(sclxOn36,0)
+                f.seek(-32,1)
+                Size964 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size965 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size966 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size964:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.x = sclx35
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzz > 0:
+                f.seek(sclyOn36,0)
+                f.seek(-32,1)
+                Size967 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size968 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size969 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size967:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.y = scly35
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzz > 0:
+                f.seek(sclzOn36,0)
+                f.seek(-32,1)
+                Size970 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size971 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size972 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size970:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz35 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.z = sclz35
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzz > 0:
+                f.seek(posxOn37,0)
+                f.seek(-32,1)
+                Size973 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size974 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size975 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size973:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.x = posx36
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzz > 0:
+                f.seek(posyOn37,0)
+                f.seek(-32,1)
+                Size976 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size977 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size978 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size976:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.y = posy36
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzz > 0:
+                f.seek(poszOn37,0)
+                f.seek(-32,1)
+                Size979 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size980 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size981 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size979:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.z = posz36
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+            if booleanRX1zzzzzzzzzzzz > 0:
+                f.seek(rotxOn37,0)
+                f.seek(-32,1)
+                Size982 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size983 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size984 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size982:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx36 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.x = rotx36
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzz > 0:
+                f.seek(rotyOn37,0)
+                f.seek(-32,1)
+                Size985 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size986 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size987 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size985:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz36 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.z = rotz36
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzz > 0:
+                f.seek(rotzOn37,0)
+                f.seek(-32,1)
+                Size988 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size989 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size990 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size988:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty36 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.y = roty36
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzz > 0:
+                f.seek(sclxOn37,0)
+                f.seek(-32,1)
+                Size991 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size992 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size993 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size991:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.x = sclx36
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzz > 0:
+                f.seek(sclyOn37,0)
+                f.seek(-32,1)
+                Size994 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size995 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size996 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size994:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.y = scly36
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzz > 0:
+                f.seek(sclzOn37,0)
+                f.seek(-32,1)
+                Size997 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size998 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size999 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size997:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz36 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.z = sclz36
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzz > 0:
+                f.seek(posxOn38,0)
+                f.seek(-32,1)
+                Size1000 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1001 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1002 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1000:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.x = posx37
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzz > 0:
+                f.seek(posyOn38,0)
+                f.seek(-32,1)
+                Size1003 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1004 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1005 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1003:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.y = posy37
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzz > 0:
+                f.seek(poszOn38,0)
+                f.seek(-32,1)
+                Size1006 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1007 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1008 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1006:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.z = posz37
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzz > 0:
+                f.seek(rotxOn38,0)
+                f.seek(-32,1)
+                Size1009 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1010 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1011 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1009:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx37 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.x = rotx37
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzz > 0:
+                f.seek(rotyOn38,0)
+                f.seek(-32,1)
+                Size1012 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1013 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1014 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1012:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz37 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.z = rotz37
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzz > 0:
+                f.seek(rotzOn38,0)
+                f.seek(-32,1)
+                Size1015 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1016 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1017 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1015:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty37 = -unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.y = roty37
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzz > 0:
+                f.seek(sclxOn38,0)
+                f.seek(-32,1)
+                Size1018 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1019 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1020 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1018:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.x = sclx37
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzz > 0:
+                f.seek(sclyOn38,0)
+                f.seek(-32,1)
+                Size1021 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1022 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1023 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1021:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.y = scly37
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzz > 0:
+                f.seek(sclzOn38,0)
+                f.seek(-32,1)
+                Size1024 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1025 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1026 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1024:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz37 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.z = sclz37
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzz > 0:
+                f.seek(posxOn39,0)
+                f.seek(-32,1)
+                Size1027 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1028 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size1029 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size1027:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx38 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[3].location.x = posx38
+                    ob.pose.bones[3].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
                         
 
 def ani_importer_read(filepath, Boolean1V2=False, Boolean2V2=False, V1=False, V6=False):
