@@ -1,5 +1,5 @@
 bl_info = {
-        'name'			: 'Finding Nemo Simple Animation Importer Exporter',
+        'name'			: 'Finding Nemo Simple Animation Importer Exporter Experimental',
 	'author'		: 'DarkShadow Nemo',
 	'version'		: (0, 0, 1),
 	'blender'		: (3, 0, 0),
@@ -13,7 +13,7 @@ import importlib
 from bpy.props import CollectionProperty, StringProperty, BoolProperty, EnumProperty, FloatProperty, IntProperty
 from bpy_extras.io_utils import ImportHelper, ExportHelper
 
-from.import ani_import_export #ani_export
+from.import ani_import_export2 #ani_export
 
 class ImportAniAkaAnimation(bpy.types.Operator, ImportHelper):
         bl_idname  = 'ani_import_export_.ani'
@@ -25,21 +25,29 @@ class ImportAniAkaAnimation(bpy.types.Operator, ImportHelper):
                 description = 'File path used for finding the ani aka Animation.',
                 type	    = bpy.types.OperatorFileListElement
         )
-        Beta_ani: BoolProperty(
-                name = "beta ani",
-                description = "plays proper animations"
+        Boolean1V2: BoolProperty(
+                name = "boolean 1",
+                description = "only imports bool1"
         )
-        Norm_ani: BoolProperty(
-                name = "normal ani",
-                description = "plays default animation but may get a bit buggy"
+        Boolean2V2: BoolProperty(
+                name = "boolean 2",
+                description = "only imports bool2"
+        )
+        V1: BoolProperty(
+                name = "twoc v1",
+                description = "imports twoc v1"
+        )
+        V6: BoolProperty(
+                name = "link v6",
+                description = "imports link v6"
         )
         directory: StringProperty()
         filter_glob: StringProperty(default = '*.ani', options = {'HIDDEN'})
         def execute(self, context):
                 paths = [os.path.join(self.directory, name.name) for name in self.files]
                 if not paths: paths.append(self.filepath)
-                importlib.reload(ani_import_export)
-                for path in paths: ani_import_export.ani_importer_read(path, Beta_ani = self.Beta_ani, Norm_ani = self.Norm_ani)
+                importlib.reload(ani_import_export2)
+                for path in paths: ani_import_export2.ani_importer_read(path, Boolean1V2 = self.Boolean1V2, Boolean2V2 = self.Boolean2V2, V1 = self.V1, V6 = self.V6,)
                 return {'FINISHED'}
 
 class ExportAniAkaAnimation(bpy.types.Operator, ExportHelper):
@@ -56,8 +64,8 @@ class ExportAniAkaAnimation(bpy.types.Operator, ExportHelper):
         filter_glob: StringProperty(default = '*.ani', options = {'HIDDEN'})
         
         def execute(self, context):
-                importlib.reload(ani_import_export)
-                ani_import_export.ani_exporter_write(self.filepath)
+                importlib.reload(ani_import_export2)
+                ani_import_export2.ani_exporter_write(self.filepath)
                 return {'FINISHED'}
                 
 
