@@ -113,7 +113,7 @@ def ani_importV2(f):
                 while f.tell() < Size10:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx = -unpack("<f", f.read(4))[0]
+                    rotx = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -126,10 +126,10 @@ def ani_importV2(f):
                 while f.tell() < Size13:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz = -unpack("<f", f.read(4))[0]
+                    rotz = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
             if booleanRZ1 > 0:
                 f.seek(rotzOn,0)
                 f.seek(-32,1)
@@ -139,10 +139,10 @@ def ani_importV2(f):
                 while f.tell() < Size16:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty = -unpack("<f", f.read(4))[0]
+                    roty = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
             if booleanSX1 > 0:
                 f.seek(sclxOn,0)
                 f.seek(-32,1)
@@ -275,7 +275,7 @@ def ani_importV2(f):
                 while f.tell() < Size10:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx = -unpack("<f", f.read(4))[0]
+                    rotx = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -289,10 +289,10 @@ def ani_importV2(f):
                 while f.tell() < Size13:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz = -unpack("<f", f.read(4))[0]
+                    rotz = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1a > 0:
                 f.seek(rotzOn1,0)
@@ -303,10 +303,10 @@ def ani_importV2(f):
                 while f.tell() < Size16:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty = -unpack("<f", f.read(4))[0]
+                    roty = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1a > 0:
                 f.seek(sclxOn1,0)
@@ -401,7 +401,7 @@ def ani_importV2(f):
                 while f.tell() < Size37:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx1 = -unpack("<f", f.read(4))[0]
+                    rotx1 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx1
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -415,10 +415,10 @@ def ani_importV2(f):
                 while f.tell() < Size40:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz1 = -unpack("<f", f.read(4))[0]
+                    rotz1 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz1
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz1
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1b > 0:
                 f.seek(rotzOn2,0)
@@ -429,10 +429,10 @@ def ani_importV2(f):
                 while f.tell() < Size43:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty1 = -unpack("<f", f.read(4))[0]
+                    roty1 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty1
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty1
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1b > 0:
                 f.seek(sclxOn2,0)
@@ -588,7 +588,7 @@ def ani_importV2(f):
                 while f.tell() < Size64:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx2 = -unpack("<f", f.read(4))[0]
+                    rotx2 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx2
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -602,10 +602,10 @@ def ani_importV2(f):
                 while f.tell() < Size67:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz2 = -unpack("<f", f.read(4))[0]
+                    rotz2 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz2
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz2
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1c > 0:
                 f.seek(rotzOn3,0)
@@ -616,10 +616,10 @@ def ani_importV2(f):
                 while f.tell() < Size70:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty2 = -unpack("<f", f.read(4))[0]
+                    roty2 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty2
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty2
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1c > 0:
                 f.seek(sclxOn3,0)
@@ -714,7 +714,7 @@ def ani_importV2(f):
                 while f.tell() < Size91:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx3 = -unpack("<f", f.read(4))[0]
+                    rotx3 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx3
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -728,10 +728,10 @@ def ani_importV2(f):
                 while f.tell() < Size94:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz3 = -unpack("<f", f.read(4))[0]
+                    rotz3 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz3
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz3
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1d > 0:
                 f.seek(rotzOn4,0)
@@ -742,10 +742,10 @@ def ani_importV2(f):
                 while f.tell() < Size97:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty3 = -unpack("<f", f.read(4))[0]
+                    roty3 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty3
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty3
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1d > 0:
                 f.seek(sclxOn4,0)
@@ -840,7 +840,7 @@ def ani_importV2(f):
                 while f.tell() < Size118:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx4 = -unpack("<f", f.read(4))[0]
+                    rotx4 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx4
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -854,10 +854,10 @@ def ani_importV2(f):
                 while f.tell() < Size121:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz4 = -unpack("<f", f.read(4))[0]
+                    rotz4 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz4
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz4
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1e > 0:
                 f.seek(rotzOn5,0)
@@ -868,10 +868,10 @@ def ani_importV2(f):
                 while f.tell() < Size124:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty4 = -unpack("<f", f.read(4))[0]
+                    roty4 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty4
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty4
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1e > 0:
                 f.seek(sclxOn5,0)
@@ -1046,7 +1046,7 @@ def ani_importV2(f):
                 while f.tell() < Size145:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx5 = -unpack("<f", f.read(4))[0]
+                    rotx5 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx5
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1060,10 +1060,10 @@ def ani_importV2(f):
                 while f.tell() < Size148:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz5 = -unpack("<f", f.read(4))[0]
+                    rotz5 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz5
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz5
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1f > 0:
                 f.seek(rotzOn6,0)
@@ -1074,10 +1074,10 @@ def ani_importV2(f):
                 while f.tell() < Size151:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty5 = -unpack("<f", f.read(4))[0]
+                    roty5 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty5
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty5
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1f > 0:
                 f.seek(sclxOn6,0)
@@ -1172,7 +1172,7 @@ def ani_importV2(f):
                 while f.tell() < Size172:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx6 = -unpack("<f", f.read(4))[0]
+                    rotx6 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx6
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1186,10 +1186,10 @@ def ani_importV2(f):
                 while f.tell() < Size175:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz6 = -unpack("<f", f.read(4))[0]
+                    rotz6 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz6
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz6
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1g > 0:
                 f.seek(rotzOn7,0)
@@ -1200,10 +1200,10 @@ def ani_importV2(f):
                 while f.tell() < Size178:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty6 = -unpack("<f", f.read(4))[0]
+                    roty6 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty6
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty6
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1g > 0:
                 f.seek(sclxOn7,0)
@@ -1298,7 +1298,7 @@ def ani_importV2(f):
                 while f.tell() < Size199:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx7 = -unpack("<f", f.read(4))[0]
+                    rotx7 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx7
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1312,10 +1312,10 @@ def ani_importV2(f):
                 while f.tell() < Size202:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz7 = -unpack("<f", f.read(4))[0]
+                    rotz7 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz7
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz7
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1h > 0:
                 f.seek(rotzOn8,0)
@@ -1326,10 +1326,10 @@ def ani_importV2(f):
                 while f.tell() < Size205:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty7 = -unpack("<f", f.read(4))[0]
+                    roty7 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty7
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty7
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1h > 0:
                 f.seek(sclxOn8,0)
@@ -1424,7 +1424,7 @@ def ani_importV2(f):
                 while f.tell() < Size226:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx8 = -unpack("<f", f.read(4))[0]
+                    rotx8 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx8
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1438,10 +1438,10 @@ def ani_importV2(f):
                 while f.tell() < Size229:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz8 = -unpack("<f", f.read(4))[0]
+                    rotz8 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz8
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz8
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1i > 0:
                 f.seek(rotzOn9,0)
@@ -1452,10 +1452,10 @@ def ani_importV2(f):
                 while f.tell() < Size232:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty8 = -unpack("<f", f.read(4))[0]
+                    roty8 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty8
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty8
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1i > 0:
                 f.seek(sclxOn9,0)
@@ -1651,7 +1651,7 @@ def ani_importV2(f):
                 while f.tell() < Size253:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx = -unpack("<f", f.read(4))[0]
+                    rotx = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1665,10 +1665,10 @@ def ani_importV2(f):
                 while f.tell() < Size256:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz = -unpack("<f", f.read(4))[0]
+                    rotz = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1j > 0:
                 f.seek(rotzOn10,0)
@@ -1679,10 +1679,10 @@ def ani_importV2(f):
                 while f.tell() < Size259:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty = -unpack("<f", f.read(4))[0]
+                    roty = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1j > 0:
                 f.seek(sclxOn10,0)
@@ -1777,7 +1777,7 @@ def ani_importV2(f):
                 while f.tell() < Size280:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx10 = -unpack("<f", f.read(4))[0]
+                    rotx10 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx10
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1791,10 +1791,10 @@ def ani_importV2(f):
                 while f.tell() < Size283:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz10 = -unpack("<f", f.read(4))[0]
+                    rotz10 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz10
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz10
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1k > 0:
                 f.seek(rotzOn11,0)
@@ -1805,10 +1805,10 @@ def ani_importV2(f):
                 while f.tell() < Size286:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty10 = -unpack("<f", f.read(4))[0]
+                    roty10 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty10
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty10
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1k > 0:
                 f.seek(sclxOn11,0)
@@ -1903,7 +1903,7 @@ def ani_importV2(f):
                 while f.tell() < Size307:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx11 = -unpack("<f", f.read(4))[0]
+                    rotx11 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx11
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -1917,10 +1917,10 @@ def ani_importV2(f):
                 while f.tell() < Size310:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz11 = -unpack("<f", f.read(4))[0]
+                    rotz11 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz11
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz11
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1l > 0:
                 f.seek(rotzOn12,0)
@@ -1931,10 +1931,10 @@ def ani_importV2(f):
                 while f.tell() < Size313:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty11 = -unpack("<f", f.read(4))[0]
+                    roty11 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty11
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty11
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1l > 0:
                 f.seek(sclxOn12,0)
@@ -2029,7 +2029,7 @@ def ani_importV2(f):
                 while f.tell() < Size334:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx12 = -unpack("<f", f.read(4))[0]
+                    rotx12 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx12
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2043,10 +2043,10 @@ def ani_importV2(f):
                 while f.tell() < Size337:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz12 = -unpack("<f", f.read(4))[0]
+                    rotz12 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz12
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz12
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1m > 0:
                 f.seek(rotzOn13,0)
@@ -2057,10 +2057,10 @@ def ani_importV2(f):
                 while f.tell() < Size340:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty12 = -unpack("<f", f.read(4))[0]
+                    roty12 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty12
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty12
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1m > 0:
                 f.seek(sclxOn13,0)
@@ -2155,7 +2155,7 @@ def ani_importV2(f):
                 while f.tell() < Size361:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx13 = -unpack("<f", f.read(4))[0]
+                    rotx13 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx13
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2169,10 +2169,10 @@ def ani_importV2(f):
                 while f.tell() < Size364:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz13 = -unpack("<f", f.read(4))[0]
+                    rotz13 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz13
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz13
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1n > 0:
                 f.seek(rotzOn14,0)
@@ -2183,10 +2183,10 @@ def ani_importV2(f):
                 while f.tell() < Size367:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty13 = -unpack("<f", f.read(4))[0]
+                    roty13 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty13
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty13
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1n > 0:
                 f.seek(sclxOn14,0)
@@ -2402,7 +2402,7 @@ def ani_importV2(f):
                 while f.tell() < Size388:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx14 = -unpack("<f", f.read(4))[0]
+                    rotx14 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx14
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2416,10 +2416,10 @@ def ani_importV2(f):
                 while f.tell() < Size391:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz14 = -unpack("<f", f.read(4))[0]
+                    rotz14 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz14
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz14
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1o > 0:
                 f.seek(rotzOn15,0)
@@ -2430,10 +2430,10 @@ def ani_importV2(f):
                 while f.tell() < Size394:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty14 = -unpack("<f", f.read(4))[0]
+                    roty14 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty14
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty14
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1o > 0:
                 f.seek(sclxOn15,0)
@@ -2528,7 +2528,7 @@ def ani_importV2(f):
                 while f.tell() < Size415:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx15 = -unpack("<f", f.read(4))[0]
+                    rotx15 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx15
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2542,10 +2542,10 @@ def ani_importV2(f):
                 while f.tell() < Size418:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz15 = -unpack("<f", f.read(4))[0]
+                    rotz15 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz15
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz15
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1p > 0:
                 f.seek(rotzOn16,0)
@@ -2556,10 +2556,10 @@ def ani_importV2(f):
                 while f.tell() < Size421:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty15 = -unpack("<f", f.read(4))[0]
+                    roty15 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty15
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty15
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1p > 0:
                 f.seek(sclxOn16,0)
@@ -2654,7 +2654,7 @@ def ani_importV2(f):
                 while f.tell() < Size442:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx16 = -unpack("<f", f.read(4))[0]
+                    rotx16 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx16
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2668,10 +2668,10 @@ def ani_importV2(f):
                 while f.tell() < Size445:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz16 = -unpack("<f", f.read(4))[0]
+                    rotz16 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz16
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz16
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1q > 0:
                 f.seek(rotzOn17,0)
@@ -2682,10 +2682,10 @@ def ani_importV2(f):
                 while f.tell() < Size448:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty16 = -unpack("<f", f.read(4))[0]
+                    roty16 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty16
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty16
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1q > 0:
                 f.seek(sclxOn17,0)
@@ -2780,7 +2780,7 @@ def ani_importV2(f):
                 while f.tell() < Size469:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx17 = -unpack("<f", f.read(4))[0]
+                    rotx17 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx17
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2794,10 +2794,10 @@ def ani_importV2(f):
                 while f.tell() < Size472:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz17 = -unpack("<f", f.read(4))[0]
+                    rotz17 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz17
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz17
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1r > 0:
                 f.seek(rotzOn18,0)
@@ -2808,10 +2808,10 @@ def ani_importV2(f):
                 while f.tell() < Size475:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty17 = -unpack("<f", f.read(4))[0]
+                    roty17 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty17
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty17
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1r > 0:
                 f.seek(sclxOn18,0)
@@ -2906,7 +2906,7 @@ def ani_importV2(f):
                 while f.tell() < Size496:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx18 = -unpack("<f", f.read(4))[0]
+                    rotx18 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx18
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -2920,10 +2920,10 @@ def ani_importV2(f):
                 while f.tell() < Size499:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz18 = -unpack("<f", f.read(4))[0]
+                    rotz18 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz18
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz18
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1s > 0:
                 f.seek(rotzOn19,0)
@@ -2934,10 +2934,10 @@ def ani_importV2(f):
                 while f.tell() < Size502:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty18 = -unpack("<f", f.read(4))[0]
+                    roty18 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty18
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty18
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1s > 0:
                 f.seek(sclxOn19,0)
@@ -3032,7 +3032,7 @@ def ani_importV2(f):
                 while f.tell() < Size523:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx19 = -unpack("<f", f.read(4))[0]
+                    rotx19 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx19
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3046,10 +3046,10 @@ def ani_importV2(f):
                 while f.tell() < Size526:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz19 = -unpack("<f", f.read(4))[0]
+                    rotz19 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz19
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz19
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1t > 0:
                 f.seek(rotzOn20,0)
@@ -3060,10 +3060,10 @@ def ani_importV2(f):
                 while f.tell() < Size529:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty19 = -unpack("<f", f.read(4))[0]
+                    roty19 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty19
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty19
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1t > 0:
                 f.seek(sclxOn20,0)
@@ -3299,7 +3299,7 @@ def ani_importV2(f):
                 while f.tell() < Size550:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx20 = -unpack("<f", f.read(4))[0]
+                    rotx20 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx20
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3313,10 +3313,10 @@ def ani_importV2(f):
                 while f.tell() < Size553:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz20 = -unpack("<f", f.read(4))[0]
+                    rotz20 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz20
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz20
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1u > 0:
                 f.seek(rotzOn21,0)
@@ -3327,10 +3327,10 @@ def ani_importV2(f):
                 while f.tell() < Size556:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty20 = -unpack("<f", f.read(4))[0]
+                    roty20 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty20
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty20
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1u > 0:
                 f.seek(sclxOn21,0)
@@ -3425,7 +3425,7 @@ def ani_importV2(f):
                 while f.tell() < Size577:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx21 = -unpack("<f", f.read(4))[0]
+                    rotx21 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx21
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3439,10 +3439,10 @@ def ani_importV2(f):
                 while f.tell() < Size580:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz21 = -unpack("<f", f.read(4))[0]
+                    rotz21 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz21
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz21
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1v > 0:
                 f.seek(rotzOn22,0)
@@ -3453,10 +3453,10 @@ def ani_importV2(f):
                 while f.tell() < Size583:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty21 = -unpack("<f", f.read(4))[0]
+                    roty21 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty21
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty21
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1v > 0:
                 f.seek(sclxOn22,0)
@@ -3551,7 +3551,7 @@ def ani_importV2(f):
                 while f.tell() < Size604:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx22 = -unpack("<f", f.read(4))[0]
+                    rotx22 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx22
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3565,10 +3565,10 @@ def ani_importV2(f):
                 while f.tell() < Size607:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz22 = -unpack("<f", f.read(4))[0]
+                    rotz22 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz22
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz22
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1w > 0:
                 f.seek(rotzOn23,0)
@@ -3579,10 +3579,10 @@ def ani_importV2(f):
                 while f.tell() < Size610:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty22 = -unpack("<f", f.read(4))[0]
+                    roty22 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty22
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty22
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1w > 0:
                 f.seek(sclxOn23,0)
@@ -3677,7 +3677,7 @@ def ani_importV2(f):
                 while f.tell() < Size631:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx23 = -unpack("<f", f.read(4))[0]
+                    rotx23 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx23
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3691,10 +3691,10 @@ def ani_importV2(f):
                 while f.tell() < Size634:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz23 = -unpack("<f", f.read(4))[0]
+                    rotz23 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz23
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz23
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1x > 0:
                 f.seek(rotzOn24,0)
@@ -3705,10 +3705,10 @@ def ani_importV2(f):
                 while f.tell() < Size637:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty23 = -unpack("<f", f.read(4))[0]
+                    roty23 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty23
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty23
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1x > 0:
                 f.seek(sclxOn24,0)
@@ -3803,7 +3803,7 @@ def ani_importV2(f):
                 while f.tell() < Size658:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx24 = -unpack("<f", f.read(4))[0]
+                    rotx24 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx24
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3817,10 +3817,10 @@ def ani_importV2(f):
                 while f.tell() < Size661:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz24 = -unpack("<f", f.read(4))[0]
+                    rotz24 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz24
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz24
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1y > 0:
                 f.seek(rotzOn25,0)
@@ -3831,10 +3831,10 @@ def ani_importV2(f):
                 while f.tell() < Size664:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty24 = -unpack("<f", f.read(4))[0]
+                    roty24 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty24
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty24
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1y > 0:
                 f.seek(sclxOn25,0)
@@ -3929,7 +3929,7 @@ def ani_importV2(f):
                 while f.tell() < Size685:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx25 = -unpack("<f", f.read(4))[0]
+                    rotx25 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx25
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -3943,10 +3943,10 @@ def ani_importV2(f):
                 while f.tell() < Size688:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz25 = -unpack("<f", f.read(4))[0]
+                    rotz25 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz25
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz25
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1z > 0:
                 f.seek(rotzOn26,0)
@@ -3957,10 +3957,10 @@ def ani_importV2(f):
                 while f.tell() < Size691:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty25 = -unpack("<f", f.read(4))[0]
+                    roty25 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty25
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty25
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1z > 0:
                 f.seek(sclxOn26,0)
@@ -4055,7 +4055,7 @@ def ani_importV2(f):
                 while f.tell() < Size712:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx26 = -unpack("<f", f.read(4))[0]
+                    rotx26 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx26
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4069,10 +4069,10 @@ def ani_importV2(f):
                 while f.tell() < Size715:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz26 = -unpack("<f", f.read(4))[0]
+                    rotz26 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz26
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz26
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zz > 0:
                 f.seek(rotzOn27,0)
@@ -4083,10 +4083,10 @@ def ani_importV2(f):
                 while f.tell() < Size718:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty26 = -unpack("<f", f.read(4))[0]
+                    roty26 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty26
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty26
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zz > 0:
                 f.seek(sclxOn27,0)
@@ -4342,7 +4342,7 @@ def ani_importV2(f):
                 while f.tell() < Size739:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx27 = -unpack("<f", f.read(4))[0]
+                    rotx27 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx27
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4356,10 +4356,10 @@ def ani_importV2(f):
                 while f.tell() < Size742:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz27 = -unpack("<f", f.read(4))[0]
+                    rotz27 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz27
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz27
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzz > 0:
                 f.seek(rotzOn28,0)
@@ -4370,10 +4370,10 @@ def ani_importV2(f):
                 while f.tell() < Size745:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty27 = -unpack("<f", f.read(4))[0]
+                    roty27 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty27
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty27
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzz > 0:
                 f.seek(sclxOn28,0)
@@ -4467,7 +4467,7 @@ def ani_importV2(f):
                 while f.tell() < Size766:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx28 = -unpack("<f", f.read(4))[0]
+                    rotx28 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx28
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4481,10 +4481,10 @@ def ani_importV2(f):
                 while f.tell() < Size769:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz28 = -unpack("<f", f.read(4))[0]
+                    rotz28 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz28
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz28
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzz > 0:
                 f.seek(rotzOn29,0)
@@ -4495,10 +4495,10 @@ def ani_importV2(f):
                 while f.tell() < Size772:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty28 = -unpack("<f", f.read(4))[0]
+                    roty28 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty28
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty28
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzz > 0:
                 f.seek(sclxOn29,0)
@@ -4593,7 +4593,7 @@ def ani_importV2(f):
                 while f.tell() < Size793:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx29 = -unpack("<f", f.read(4))[0]
+                    rotx29 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx29
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4607,10 +4607,10 @@ def ani_importV2(f):
                 while f.tell() < Size796:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz29 = -unpack("<f", f.read(4))[0]
+                    rotz29 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz29
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz29
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzz > 0:
                 f.seek(rotzOn30,0)
@@ -4621,10 +4621,10 @@ def ani_importV2(f):
                 while f.tell() < Size799:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty29 = -unpack("<f", f.read(4))[0]
+                    roty29 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty29
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty29
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzz > 0:
                 f.seek(sclxOn30,0)
@@ -4719,7 +4719,7 @@ def ani_importV2(f):
                 while f.tell() < Size820:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx30 = -unpack("<f", f.read(4))[0]
+                    rotx30 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx30
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4733,10 +4733,10 @@ def ani_importV2(f):
                 while f.tell() < Size823:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz30 = -unpack("<f", f.read(4))[0]
+                    rotz30 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz30
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz30
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzz > 0:
                 f.seek(rotzOn31,0)
@@ -4747,10 +4747,10 @@ def ani_importV2(f):
                 while f.tell() < Size826:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty30 = -unpack("<f", f.read(4))[0]
+                    roty30 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty30
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty30
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzz > 0:
                 f.seek(sclxOn31,0)
@@ -4845,7 +4845,7 @@ def ani_importV2(f):
                 while f.tell() < Size847:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx31 = -unpack("<f", f.read(4))[0]
+                    rotx31 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx31
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4859,10 +4859,10 @@ def ani_importV2(f):
                 while f.tell() < Size850:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz31 = -unpack("<f", f.read(4))[0]
+                    rotz31 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz31
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz31
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzz > 0:
                 f.seek(rotzOn32,0)
@@ -4873,10 +4873,10 @@ def ani_importV2(f):
                 while f.tell() < Size853:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty31 = -unpack("<f", f.read(4))[0]
+                    roty31 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty31
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty31
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzz > 0:
                 f.seek(sclxOn32,0)
@@ -4971,7 +4971,7 @@ def ani_importV2(f):
                 while f.tell() < Size874:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx32 = -unpack("<f", f.read(4))[0]
+                    rotx32 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx32
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -4985,10 +4985,10 @@ def ani_importV2(f):
                 while f.tell() < Size877:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz32 = -unpack("<f", f.read(4))[0]
+                    rotz32 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz32
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz32
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzz > 0:
                 f.seek(rotzOn33,0)
@@ -4999,10 +4999,10 @@ def ani_importV2(f):
                 while f.tell() < Size880:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty32 = -unpack("<f", f.read(4))[0]
+                    roty32 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty32
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty32
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzz > 0:
                 f.seek(sclxOn33,0)
@@ -5097,7 +5097,7 @@ def ani_importV2(f):
                 while f.tell() < Size901:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx33 = -unpack("<f", f.read(4))[0]
+                    rotx33 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx33
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5111,10 +5111,10 @@ def ani_importV2(f):
                 while f.tell() < Size904:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz33 = -unpack("<f", f.read(4))[0]
+                    rotz33 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz33
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz33
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzz > 0:
                 f.seek(rotzOn34,0)
@@ -5125,10 +5125,10 @@ def ani_importV2(f):
                 while f.tell() < Size907:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty33 = -unpack("<f", f.read(4))[0]
+                    roty33 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty33
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty33
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzz > 0:
                 f.seek(sclxOn34,0)
@@ -5223,7 +5223,7 @@ def ani_importV2(f):
                 while f.tell() < Size928:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx34 = -unpack("<f", f.read(4))[0]
+                    rotx34 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx34
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5237,10 +5237,10 @@ def ani_importV2(f):
                 while f.tell() < Size931:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz34 = -unpack("<f", f.read(4))[0]
+                    rotz34 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz34
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz34
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzz > 0:
                 f.seek(rotzOn35,0)
@@ -5251,10 +5251,10 @@ def ani_importV2(f):
                 while f.tell() < Size934:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty34 = -unpack("<f", f.read(4))[0]
+                    roty34 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty34
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty34
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzz > 0:
                 f.seek(sclxOn35,0)
@@ -5530,7 +5530,7 @@ def ani_importV2(f):
                 while f.tell() < Size955:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx35 = -unpack("<f", f.read(4))[0]
+                    rotx35 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx35
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5544,10 +5544,10 @@ def ani_importV2(f):
                 while f.tell() < Size958:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz35 = -unpack("<f", f.read(4))[0]
+                    rotz35 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz35
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz35
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzz > 0:
                 f.seek(rotzOn36,0)
@@ -5558,10 +5558,10 @@ def ani_importV2(f):
                 while f.tell() < Size961:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty35 = -unpack("<f", f.read(4))[0]
+                    roty35 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty35
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty35
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzz > 0:
                 f.seek(sclxOn36,0)
@@ -5655,7 +5655,7 @@ def ani_importV2(f):
                 while f.tell() < Size982:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx36 = -unpack("<f", f.read(4))[0]
+                    rotx36 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx36
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5669,10 +5669,10 @@ def ani_importV2(f):
                 while f.tell() < Size985:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz36 = -unpack("<f", f.read(4))[0]
+                    rotz36 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz36
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz36
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzz > 0:
                 f.seek(rotzOn37,0)
@@ -5683,10 +5683,10 @@ def ani_importV2(f):
                 while f.tell() < Size988:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty36 = -unpack("<f", f.read(4))[0]
+                    roty36 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty36
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty36
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzz > 0:
                 f.seek(sclxOn37,0)
@@ -5781,7 +5781,7 @@ def ani_importV2(f):
                 while f.tell() < Size1009:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx37 = -unpack("<f", f.read(4))[0]
+                    rotx37 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx37
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5795,10 +5795,10 @@ def ani_importV2(f):
                 while f.tell() < Size1012:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz37 = -unpack("<f", f.read(4))[0]
+                    rotz37 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz37
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz37
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzz > 0:
                 f.seek(rotzOn38,0)
@@ -5809,10 +5809,10 @@ def ani_importV2(f):
                 while f.tell() < Size1015:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty37 = -unpack("<f", f.read(4))[0]
+                    roty37 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty37
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty37
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzz > 0:
                 f.seek(sclxOn38,0)
@@ -5907,7 +5907,7 @@ def ani_importV2(f):
                 while f.tell() < Size1036:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx38 = -unpack("<f", f.read(4))[0]
+                    rotx38 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx38
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -5921,10 +5921,10 @@ def ani_importV2(f):
                 while f.tell() < Size1039:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz38 = -unpack("<f", f.read(4))[0]
+                    rotz38 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz38
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz38
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn39,0)
@@ -5935,10 +5935,10 @@ def ani_importV2(f):
                 while f.tell() < Size1042:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty38 = -unpack("<f", f.read(4))[0]
+                    roty38 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty38
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty38
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn39,0)
@@ -6033,7 +6033,7 @@ def ani_importV2(f):
                 while f.tell() < Size1063:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx39 = -unpack("<f", f.read(4))[0]
+                    rotx39 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx39
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6047,10 +6047,10 @@ def ani_importV2(f):
                 while f.tell() < Size1066:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz39 = -unpack("<f", f.read(4))[0]
+                    rotz39 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz39
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz39
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn40,0)
@@ -6061,10 +6061,10 @@ def ani_importV2(f):
                 while f.tell() < Size1069:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty39 = -unpack("<f", f.read(4))[0]
+                    roty39 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty39
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty39
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn40,0)
@@ -6159,7 +6159,7 @@ def ani_importV2(f):
                 while f.tell() < Size1090:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx40 = -unpack("<f", f.read(4))[0]
+                    rotx40 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx40
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6173,10 +6173,10 @@ def ani_importV2(f):
                 while f.tell() < Size1093:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz40 = -unpack("<f", f.read(4))[0]
+                    rotz40 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz40
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz40
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn41,0)
@@ -6187,10 +6187,10 @@ def ani_importV2(f):
                 while f.tell() < Size1096:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty40 = -unpack("<f", f.read(4))[0]
+                    roty40 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty40
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty40
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn41,0)
@@ -6285,7 +6285,7 @@ def ani_importV2(f):
                 while f.tell() < Size1117:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx41 = -unpack("<f", f.read(4))[0]
+                    rotx41 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx41
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6299,10 +6299,10 @@ def ani_importV2(f):
                 while f.tell() < Size1120:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz41 = -unpack("<f", f.read(4))[0]
+                    rotz41 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz41
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz41
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn42,0)
@@ -6313,10 +6313,10 @@ def ani_importV2(f):
                 while f.tell() < Size1123:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty41 = -unpack("<f", f.read(4))[0]
+                    roty41 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty41
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty41
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn42,0)
@@ -6411,7 +6411,7 @@ def ani_importV2(f):
                 while f.tell() < Size1144:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx42 = -unpack("<f", f.read(4))[0]
+                    rotx42 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx42
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6425,10 +6425,10 @@ def ani_importV2(f):
                 while f.tell() < Size1147:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz42 = -unpack("<f", f.read(4))[0]
+                    rotz42 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz42
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz42
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn43,0)
@@ -6439,10 +6439,10 @@ def ani_importV2(f):
                 while f.tell() < Size1150:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty42 = -unpack("<f", f.read(4))[0]
+                    roty42 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty42
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty42
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn43,0)
@@ -6537,7 +6537,7 @@ def ani_importV2(f):
                 while f.tell() < Size1171:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx43 = -unpack("<f", f.read(4))[0]
+                    rotx43 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[8].rotation_euler.x = rotx43
                     ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6551,10 +6551,10 @@ def ani_importV2(f):
                 while f.tell() < Size1174:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz43 = -unpack("<f", f.read(4))[0]
+                    rotz43 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.z = rotz43
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.y = rotz43
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn44,0)
@@ -6565,10 +6565,10 @@ def ani_importV2(f):
                 while f.tell() < Size1177:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty43 = -unpack("<f", f.read(4))[0]
+                    roty43 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.y = roty43
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.z = roty43
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn44,0)
@@ -6864,7 +6864,7 @@ def ani_importV2(f):
                 while f.tell() < Size1198:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx44 = -unpack("<f", f.read(4))[0]
+                    rotx44 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx44
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -6878,10 +6878,10 @@ def ani_importV2(f):
                 while f.tell() < Size1201:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz44 = -unpack("<f", f.read(4))[0]
+                    rotz44 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz44
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz44
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn45,0)
@@ -6892,10 +6892,10 @@ def ani_importV2(f):
                 while f.tell() < Size1204:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty44 = -unpack("<f", f.read(4))[0]
+                    roty44 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty44
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty44
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn45,0)
@@ -6990,7 +6990,7 @@ def ani_importV2(f):
                 while f.tell() < Size1225:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx45 = -unpack("<f", f.read(4))[0]
+                    rotx45 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx45
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7004,10 +7004,10 @@ def ani_importV2(f):
                 while f.tell() < Size1228:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz45 = -unpack("<f", f.read(4))[0]
+                    rotz45 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz45
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz45
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn46,0)
@@ -7018,10 +7018,10 @@ def ani_importV2(f):
                 while f.tell() < Size1231:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty45 = -unpack("<f", f.read(4))[0]
+                    roty45 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty45
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty45
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn46,0)
@@ -7116,7 +7116,7 @@ def ani_importV2(f):
                 while f.tell() < Size1252:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx46 = -unpack("<f", f.read(4))[0]
+                    rotx46 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx46
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7130,10 +7130,10 @@ def ani_importV2(f):
                 while f.tell() < Size1255:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz46 = -unpack("<f", f.read(4))[0]
+                    rotz46 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz46
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz46
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn47,0)
@@ -7144,10 +7144,10 @@ def ani_importV2(f):
                 while f.tell() < Size1258:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty46 = -unpack("<f", f.read(4))[0]
+                    roty46 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty46
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty46
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn47,0)
@@ -7242,7 +7242,7 @@ def ani_importV2(f):
                 while f.tell() < Size1279:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx47 = -unpack("<f", f.read(4))[0]
+                    rotx47 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx47
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7256,10 +7256,10 @@ def ani_importV2(f):
                 while f.tell() < Size1282:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz47 = -unpack("<f", f.read(4))[0]
+                    rotz47 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz47
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz47
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn48,0)
@@ -7270,10 +7270,10 @@ def ani_importV2(f):
                 while f.tell() < Size1285:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty47 = -unpack("<f", f.read(4))[0]
+                    roty47 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty47
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty47
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn48,0)
@@ -7368,7 +7368,7 @@ def ani_importV2(f):
                 while f.tell() < Size1306:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx48 = -unpack("<f", f.read(4))[0]
+                    rotx48 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx48
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7382,10 +7382,10 @@ def ani_importV2(f):
                 while f.tell() < Size1309:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz48 = -unpack("<f", f.read(4))[0]
+                    rotz48 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz48
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz48
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn49,0)
@@ -7396,10 +7396,10 @@ def ani_importV2(f):
                 while f.tell() < Size1312:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty48 = -unpack("<f", f.read(4))[0]
+                    roty48 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty48
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty48
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn49,0)
@@ -7494,7 +7494,7 @@ def ani_importV2(f):
                 while f.tell() < Size1333:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx49 = -unpack("<f", f.read(4))[0]
+                    rotx49 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx49
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7508,10 +7508,10 @@ def ani_importV2(f):
                 while f.tell() < Size1336:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz49 = -unpack("<f", f.read(4))[0]
+                    rotz49 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz49
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz49
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn50,0)
@@ -7522,10 +7522,10 @@ def ani_importV2(f):
                 while f.tell() < Size1339:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty49 = -unpack("<f", f.read(4))[0]
+                    roty49 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty49
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty49
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn50,0)
@@ -7620,7 +7620,7 @@ def ani_importV2(f):
                 while f.tell() < Size1360:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx50 = -unpack("<f", f.read(4))[0]
+                    rotx50 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx50
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7634,10 +7634,10 @@ def ani_importV2(f):
                 while f.tell() < Size1363:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz50 = -unpack("<f", f.read(4))[0]
+                    rotz50 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz50
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz50
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn51,0)
@@ -7648,10 +7648,10 @@ def ani_importV2(f):
                 while f.tell() < Size1366:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty50 = -unpack("<f", f.read(4))[0]
+                    roty50 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty50
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty50
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn51,0)
@@ -7746,7 +7746,7 @@ def ani_importV2(f):
                 while f.tell() < Size1387:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx51 = -unpack("<f", f.read(4))[0]
+                    rotx51 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx51
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7760,10 +7760,10 @@ def ani_importV2(f):
                 while f.tell() < Size1390:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz51 = -unpack("<f", f.read(4))[0]
+                    rotz51 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz51
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz51
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn52,0)
@@ -7774,10 +7774,10 @@ def ani_importV2(f):
                 while f.tell() < Size1393:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty51 = -unpack("<f", f.read(4))[0]
+                    roty51 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty51
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty51
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn52,0)
@@ -7872,7 +7872,7 @@ def ani_importV2(f):
                 while f.tell() < Size1414:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx52 = -unpack("<f", f.read(4))[0]
+                    rotx52 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[8].rotation_euler.x = rotx52
                     ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -7886,10 +7886,10 @@ def ani_importV2(f):
                 while f.tell() < Size1417:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz52 = -unpack("<f", f.read(4))[0]
+                    rotz52 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.z = rotz52
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.y = rotz52
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn53,0)
@@ -7900,10 +7900,10 @@ def ani_importV2(f):
                 while f.tell() < Size1420:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty52 = -unpack("<f", f.read(4))[0]
+                    roty52 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.y = roty52
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.z = roty52
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn53,0)
@@ -7998,7 +7998,7 @@ def ani_importV2(f):
                 while f.tell() < Size1441:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx53 = -unpack("<f", f.read(4))[0]
+                    rotx53 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[9].rotation_euler.x = rotx53
                     ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8012,10 +8012,10 @@ def ani_importV2(f):
                 while f.tell() < Size1444:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz53 = -unpack("<f", f.read(4))[0]
+                    rotz53 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.z = rotz53
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.y = rotz53
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn54,0)
@@ -8026,10 +8026,10 @@ def ani_importV2(f):
                 while f.tell() < Size1447:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty53 = -unpack("<f", f.read(4))[0]
+                    roty53 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.y = roty53
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.z = roty53
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn54,0)
@@ -8345,7 +8345,7 @@ def ani_importV2(f):
                 while f.tell() < Size1468:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx54 = -unpack("<f", f.read(4))[0]
+                    rotx54 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx54
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8359,10 +8359,10 @@ def ani_importV2(f):
                 while f.tell() < Size1471:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz54 = -unpack("<f", f.read(4))[0]
+                    rotz54 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz54
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz54
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn55,0)
@@ -8373,10 +8373,10 @@ def ani_importV2(f):
                 while f.tell() < Size1474:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty54 = -unpack("<f", f.read(4))[0]
+                    roty54 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty54
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty54
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn55,0)
@@ -8471,7 +8471,7 @@ def ani_importV2(f):
                 while f.tell() < Size1495:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx55 = -unpack("<f", f.read(4))[0]
+                    rotx55 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx55
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8485,10 +8485,10 @@ def ani_importV2(f):
                 while f.tell() < Size1498:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz55 = -unpack("<f", f.read(4))[0]
+                    rotz55 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz55
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz55
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn56,0)
@@ -8499,10 +8499,10 @@ def ani_importV2(f):
                 while f.tell() < Size1501:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty55 = -unpack("<f", f.read(4))[0]
+                    roty55 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty55
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty55
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn56,0)
@@ -8597,7 +8597,7 @@ def ani_importV2(f):
                 while f.tell() < Size1522:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx56 = -unpack("<f", f.read(4))[0]
+                    rotx56 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx56
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8611,10 +8611,10 @@ def ani_importV2(f):
                 while f.tell() < Size1525:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz56 = -unpack("<f", f.read(4))[0]
+                    rotz56 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz56
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz56
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn57,0)
@@ -8625,10 +8625,10 @@ def ani_importV2(f):
                 while f.tell() < Size1528:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty56 = -unpack("<f", f.read(4))[0]
+                    roty56 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty56
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty56
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn57,0)
@@ -8723,7 +8723,7 @@ def ani_importV2(f):
                 while f.tell() < Size1549:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx57 = -unpack("<f", f.read(4))[0]
+                    rotx57 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx57
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8737,10 +8737,10 @@ def ani_importV2(f):
                 while f.tell() < Size1552:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz57 = -unpack("<f", f.read(4))[0]
+                    rotz57 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz57
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz57
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn58,0)
@@ -8751,10 +8751,10 @@ def ani_importV2(f):
                 while f.tell() < Size1555:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty57 = -unpack("<f", f.read(4))[0]
+                    roty57 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty57
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty57
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn58,0)
@@ -8849,7 +8849,7 @@ def ani_importV2(f):
                 while f.tell() < Size1576:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx58 = -unpack("<f", f.read(4))[0]
+                    rotx58 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx58
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8863,10 +8863,10 @@ def ani_importV2(f):
                 while f.tell() < Size1579:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz58 = -unpack("<f", f.read(4))[0]
+                    rotz58 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz58
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz58
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotyOn59,0)
@@ -8877,10 +8877,10 @@ def ani_importV2(f):
                 while f.tell() < Size1582:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty58 = -unpack("<f", f.read(4))[0]
+                    roty58 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty58
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty58
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn59,0)
@@ -8975,7 +8975,7 @@ def ani_importV2(f):
                 while f.tell() < Size1603:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx59 = -unpack("<f", f.read(4))[0]
+                    rotx59 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx59
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -8989,10 +8989,10 @@ def ani_importV2(f):
                 while f.tell() < Size1606:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz59 = -unpack("<f", f.read(4))[0]
+                    rotz59 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz59
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz59
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn60,0)
@@ -9003,10 +9003,10 @@ def ani_importV2(f):
                 while f.tell() < Size1609:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty59 = -unpack("<f", f.read(4))[0]
+                    roty59 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty59
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty59
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn60,0)
@@ -9101,7 +9101,7 @@ def ani_importV2(f):
                 while f.tell() < Size1630:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx60 = -unpack("<f", f.read(4))[0]
+                    rotx60 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx60
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9115,10 +9115,10 @@ def ani_importV2(f):
                 while f.tell() < Size1633:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz60 = -unpack("<f", f.read(4))[0]
+                    rotz60 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz60
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz60
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn61,0)
@@ -9129,10 +9129,10 @@ def ani_importV2(f):
                 while f.tell() < Size1636:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty60 = -unpack("<f", f.read(4))[0]
+                    roty60 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty60
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty60
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn61,0)
@@ -9227,7 +9227,7 @@ def ani_importV2(f):
                 while f.tell() < Size1657:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx61 = -unpack("<f", f.read(4))[0]
+                    rotx61 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx61
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9241,10 +9241,10 @@ def ani_importV2(f):
                 while f.tell() < Size1660:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz61 = -unpack("<f", f.read(4))[0]
+                    rotz61 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz61
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz61
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn62,0)
@@ -9255,10 +9255,10 @@ def ani_importV2(f):
                 while f.tell() < Size1663:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty61 = -unpack("<f", f.read(4))[0]
+                    roty61 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty61
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty61
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn62,0)
@@ -9353,7 +9353,7 @@ def ani_importV2(f):
                 while f.tell() < Size1684:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx62 = -unpack("<f", f.read(4))[0]
+                    rotx62 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[8].rotation_euler.x = rotx62
                     ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9367,10 +9367,10 @@ def ani_importV2(f):
                 while f.tell() < Size1687:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz62 = -unpack("<f", f.read(4))[0]
+                    rotz62 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.z = rotz62
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.y = rotz62
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn63,0)
@@ -9381,10 +9381,10 @@ def ani_importV2(f):
                 while f.tell() < Size1690:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty62 = -unpack("<f", f.read(4))[0]
+                    roty62 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.y = roty62
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.z = roty62
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn63,0)
@@ -9479,7 +9479,7 @@ def ani_importV2(f):
                 while f.tell() < Size1711:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx63 = -unpack("<f", f.read(4))[0]
+                    rotx63 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[9].rotation_euler.x = rotx63
                     ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9493,10 +9493,10 @@ def ani_importV2(f):
                 while f.tell() < Size1714:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz63 = -unpack("<f", f.read(4))[0]
+                    rotz63 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.z = rotz63
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.y = rotz63
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn64,0)
@@ -9507,10 +9507,10 @@ def ani_importV2(f):
                 while f.tell() < Size1717:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty63 = -unpack("<f", f.read(4))[0]
+                    roty63 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.y = roty63
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.z = roty63
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn64,0)
@@ -9605,7 +9605,7 @@ def ani_importV2(f):
                 while f.tell() < Size1738:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx64 = -unpack("<f", f.read(4))[0]
+                    rotx64 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[10].rotation_euler.x = rotx64
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9619,10 +9619,10 @@ def ani_importV2(f):
                 while f.tell() < Size1741:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz64 = -unpack("<f", f.read(4))[0]
+                    rotz64 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.z = rotz64
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.y = rotz64
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn65,0)
@@ -9633,10 +9633,10 @@ def ani_importV2(f):
                 while f.tell() < Size1744:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty64 = -unpack("<f", f.read(4))[0]
+                    roty64 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.y = roty64
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.z = roty64
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn65,0)
@@ -9972,7 +9972,7 @@ def ani_importV2(f):
                 while f.tell() < Size1765:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx65 = -unpack("<f", f.read(4))[0]
+                    rotx65 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx65
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -9986,10 +9986,10 @@ def ani_importV2(f):
                 while f.tell() < Size1768:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz65 = -unpack("<f", f.read(4))[0]
+                    rotz65 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz65
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz65
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn66,0)
@@ -10000,10 +10000,10 @@ def ani_importV2(f):
                 while f.tell() < Size1771:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty65 = -unpack("<f", f.read(4))[0]
+                    roty65 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty65
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty65
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn66,0)
@@ -10098,7 +10098,7 @@ def ani_importV2(f):
                 while f.tell() < Size1792:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx66 = -unpack("<f", f.read(4))[0]
+                    rotx66 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx66
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10112,10 +10112,10 @@ def ani_importV2(f):
                 while f.tell() < Size1795:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz66 = -unpack("<f", f.read(4))[0]
+                    rotz66 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz66
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz66
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn67,0)
@@ -10126,10 +10126,10 @@ def ani_importV2(f):
                 while f.tell() < Size1798:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty66 = -unpack("<f", f.read(4))[0]
+                    roty66 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty66
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty66
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn67,0)
@@ -10224,7 +10224,7 @@ def ani_importV2(f):
                 while f.tell() < Size1819:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx67 = -unpack("<f", f.read(4))[0]
+                    rotx67 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx67
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10238,10 +10238,10 @@ def ani_importV2(f):
                 while f.tell() < Size1822:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz67 = -unpack("<f", f.read(4))[0]
+                    rotz67 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz67
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz67
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn68,0)
@@ -10252,10 +10252,10 @@ def ani_importV2(f):
                 while f.tell() < Size1825:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty67 = -unpack("<f", f.read(4))[0]
+                    roty67 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty67
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty67
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn68,0)
@@ -10350,7 +10350,7 @@ def ani_importV2(f):
                 while f.tell() < Size1846:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx68 = -unpack("<f", f.read(4))[0]
+                    rotx68 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx68
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10364,10 +10364,10 @@ def ani_importV2(f):
                 while f.tell() < Size1849:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz68 = -unpack("<f", f.read(4))[0]
+                    rotz68 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz68
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz68
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn69,0)
@@ -10378,10 +10378,10 @@ def ani_importV2(f):
                 while f.tell() < Size1852:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty68 = -unpack("<f", f.read(4))[0]
+                    roty68 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty68
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty68
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn69,0)
@@ -10476,7 +10476,7 @@ def ani_importV2(f):
                 while f.tell() < Size1873:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx69 = -unpack("<f", f.read(4))[0]
+                    rotx69 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx69
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10490,10 +10490,10 @@ def ani_importV2(f):
                 while f.tell() < Size1876:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz69 = -unpack("<f", f.read(4))[0]
+                    rotz69 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz69
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz69
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn70,0)
@@ -10504,10 +10504,10 @@ def ani_importV2(f):
                 while f.tell() < Size1879:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty69 = -unpack("<f", f.read(4))[0]
+                    roty69 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty69
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty69
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn70,0)
@@ -10602,7 +10602,7 @@ def ani_importV2(f):
                 while f.tell() < Size1900:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx70 = -unpack("<f", f.read(4))[0]
+                    rotx70 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx70
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10616,10 +10616,10 @@ def ani_importV2(f):
                 while f.tell() < Size1903:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz70 = -unpack("<f", f.read(4))[0]
+                    rotz70 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz70
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz70
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn71,0)
@@ -10630,10 +10630,10 @@ def ani_importV2(f):
                 while f.tell() < Size1906:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty70 = -unpack("<f", f.read(4))[0]
+                    roty70 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty70
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty70
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn71,0)
@@ -10728,7 +10728,7 @@ def ani_importV2(f):
                 while f.tell() < Size1927:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx71 = -unpack("<f", f.read(4))[0]
+                    rotx71 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx71
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10742,10 +10742,10 @@ def ani_importV2(f):
                 while f.tell() < Size1930:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz71 = -unpack("<f", f.read(4))[0]
+                    rotz71 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz71
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz71
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn72,0)
@@ -10756,10 +10756,10 @@ def ani_importV2(f):
                 while f.tell() < Size1933:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty71 = -unpack("<f", f.read(4))[0]
+                    roty71 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty71
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty71
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn72,0)
@@ -10854,7 +10854,7 @@ def ani_importV2(f):
                 while f.tell() < Size1954:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx72 = -unpack("<f", f.read(4))[0]
+                    rotx72 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx72
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10868,10 +10868,10 @@ def ani_importV2(f):
                 while f.tell() < Size1957:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz72 = -unpack("<f", f.read(4))[0]
+                    rotz72 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz72
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz72
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn73,0)
@@ -10882,10 +10882,10 @@ def ani_importV2(f):
                 while f.tell() < Size1960:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty72 = -unpack("<f", f.read(4))[0]
+                    roty72 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty72
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty72
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn73,0)
@@ -10980,7 +10980,7 @@ def ani_importV2(f):
                 while f.tell() < Size1981:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx73 = -unpack("<f", f.read(4))[0]
+                    rotx73 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[8].rotation_euler.x = rotx73
                     ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -10994,10 +10994,10 @@ def ani_importV2(f):
                 while f.tell() < Size1984:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz73 = -unpack("<f", f.read(4))[0]
+                    rotz73 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.z = rotz73
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.y = rotz73
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn74,0)
@@ -11008,10 +11008,10 @@ def ani_importV2(f):
                 while f.tell() < Size1987:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty73 = -unpack("<f", f.read(4))[0]
+                    roty73 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.y = roty73
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.z = roty73
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn74,0)
@@ -11106,7 +11106,7 @@ def ani_importV2(f):
                 while f.tell() < Size2008:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx74 = -unpack("<f", f.read(4))[0]
+                    rotx74 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[9].rotation_euler.x = rotx74
                     ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -11120,10 +11120,10 @@ def ani_importV2(f):
                 while f.tell() < Size2011:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz74 = -unpack("<f", f.read(4))[0]
+                    rotz74 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.z = rotz74
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.y = rotz74
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn75,0)
@@ -11134,10 +11134,10 @@ def ani_importV2(f):
                 while f.tell() < Size2014:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty74 = -unpack("<f", f.read(4))[0]
+                    roty74 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.y = roty74
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.z = roty74
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn75,0)
@@ -11232,7 +11232,7 @@ def ani_importV2(f):
                 while f.tell() < Size2035:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx75 = -unpack("<f", f.read(4))[0]
+                    rotx75 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[10].rotation_euler.x = rotx75
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -11246,10 +11246,10 @@ def ani_importV2(f):
                 while f.tell() < Size2038:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz75 = -unpack("<f", f.read(4))[0]
+                    rotz75 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.z = rotz75
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.y = rotz75
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn76,0)
@@ -11260,10 +11260,10 @@ def ani_importV2(f):
                 while f.tell() < Size2041:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty75 = -unpack("<f", f.read(4))[0]
+                    roty75 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.y = roty75
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.z = roty75
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn76,0)
@@ -11358,7 +11358,7 @@ def ani_importV2(f):
                 while f.tell() < Size2062:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx76 = -unpack("<f", f.read(4))[0]
+                    rotx76 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[11].rotation_euler.x = rotx76
                     ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -11372,10 +11372,10 @@ def ani_importV2(f):
                 while f.tell() < Size2065:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz76 = -unpack("<f", f.read(4))[0]
+                    rotz76 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.z = rotz76
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.y = rotz76
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn77,0)
@@ -11386,10 +11386,10 @@ def ani_importV2(f):
                 while f.tell() < Size2068:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty76 = -unpack("<f", f.read(4))[0]
+                    roty76 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.y = roty76
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.z = roty76
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn77,0)
@@ -11745,7 +11745,7 @@ def ani_importV2(f):
                 while f.tell() < Size2089:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx77 = -unpack("<f", f.read(4))[0]
+                    rotx77 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[0].rotation_euler.x = rotx77
                     ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -11759,10 +11759,10 @@ def ani_importV2(f):
                 while f.tell() < Size2092:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz77 = -unpack("<f", f.read(4))[0]
+                    rotz77 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.z = rotz77
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.y = rotz77
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn78,0)
@@ -11773,10 +11773,10 @@ def ani_importV2(f):
                 while f.tell() < Size2095:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty77 = -unpack("<f", f.read(4))[0]
+                    roty77 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[0].rotation_euler.y = roty77
-                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[0].rotation_euler.z = roty77
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn78,0)
@@ -11871,7 +11871,7 @@ def ani_importV2(f):
                 while f.tell() < Size2116:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx78 = -unpack("<f", f.read(4))[0]
+                    rotx78 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[1].rotation_euler.x = rotx78
                     ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -11885,10 +11885,10 @@ def ani_importV2(f):
                 while f.tell() < Size2119:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz78 = -unpack("<f", f.read(4))[0]
+                    rotz78 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.z = rotz78
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.y = rotz78
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn79,0)
@@ -11899,10 +11899,10 @@ def ani_importV2(f):
                 while f.tell() < Size2122:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty78 = -unpack("<f", f.read(4))[0]
+                    roty78 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[1].rotation_euler.y = roty78
-                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[1].rotation_euler.z = roty78
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn79,0)
@@ -11997,7 +11997,7 @@ def ani_importV2(f):
                 while f.tell() < Size2143:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx79 = -unpack("<f", f.read(4))[0]
+                    rotx79 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[2].rotation_euler.x = rotx79
                     ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12011,10 +12011,10 @@ def ani_importV2(f):
                 while f.tell() < Size2146:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz79 = -unpack("<f", f.read(4))[0]
+                    rotz79 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.z = rotz79
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.y = rotz79
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn80,0)
@@ -12025,10 +12025,10 @@ def ani_importV2(f):
                 while f.tell() < Size2149:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty79 = -unpack("<f", f.read(4))[0]
+                    roty79 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[2].rotation_euler.y = roty79
-                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[2].rotation_euler.z = roty79
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn80,0)
@@ -12123,7 +12123,7 @@ def ani_importV2(f):
                 while f.tell() < Size2170:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx80 = -unpack("<f", f.read(4))[0]
+                    rotx80 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[3].rotation_euler.x = rotx80
                     ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12137,10 +12137,10 @@ def ani_importV2(f):
                 while f.tell() < Size2173:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz80 = -unpack("<f", f.read(4))[0]
+                    rotz80 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.z = rotz80
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.y = rotz80
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn81,0)
@@ -12151,10 +12151,10 @@ def ani_importV2(f):
                 while f.tell() < Size2176:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty80 = -unpack("<f", f.read(4))[0]
+                    roty80 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[3].rotation_euler.y = roty80
-                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[3].rotation_euler.z = roty80
+                    ob.pose.bones[3].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn81,0)
@@ -12249,7 +12249,7 @@ def ani_importV2(f):
                 while f.tell() < Size2197:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx81 = -unpack("<f", f.read(4))[0]
+                    rotx81 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[4].rotation_euler.x = rotx81
                     ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12263,10 +12263,10 @@ def ani_importV2(f):
                 while f.tell() < Size2200:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz81 = -unpack("<f", f.read(4))[0]
+                    rotz81 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.z = rotz81
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.y = rotz81
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn82,0)
@@ -12277,10 +12277,10 @@ def ani_importV2(f):
                 while f.tell() < Size2203:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty81 = -unpack("<f", f.read(4))[0]
+                    roty81 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[4].rotation_euler.y = roty81
-                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[4].rotation_euler.z = roty81
+                    ob.pose.bones[4].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn82,0)
@@ -12375,7 +12375,7 @@ def ani_importV2(f):
                 while f.tell() < Size2224:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx82 = -unpack("<f", f.read(4))[0]
+                    rotx82 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[5].rotation_euler.x = rotx82
                     ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12389,10 +12389,10 @@ def ani_importV2(f):
                 while f.tell() < Size2227:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz82 = -unpack("<f", f.read(4))[0]
+                    rotz82 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.z = rotz82
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.y = rotz82
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn83,0)
@@ -12403,10 +12403,10 @@ def ani_importV2(f):
                 while f.tell() < Size2230:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty82 = -unpack("<f", f.read(4))[0]
+                    roty82 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[5].rotation_euler.y = roty82
-                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[5].rotation_euler.z = roty82
+                    ob.pose.bones[5].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn83,0)
@@ -12501,7 +12501,7 @@ def ani_importV2(f):
                 while f.tell() < Size2251:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx83 = -unpack("<f", f.read(4))[0]
+                    rotx83 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[6].rotation_euler.x = rotx83
                     ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12515,10 +12515,10 @@ def ani_importV2(f):
                 while f.tell() < Size2254:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz83 = -unpack("<f", f.read(4))[0]
+                    rotz83 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.z = rotz83
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.y = rotz83
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn84,0)
@@ -12529,10 +12529,10 @@ def ani_importV2(f):
                 while f.tell() < Size2257:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty83 = -unpack("<f", f.read(4))[0]
+                    roty83 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[6].rotation_euler.y = roty83
-                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[6].rotation_euler.z = roty83
+                    ob.pose.bones[6].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn84,0)
@@ -12627,7 +12627,7 @@ def ani_importV2(f):
                 while f.tell() < Size2278:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx84 = -unpack("<f", f.read(4))[0]
+                    rotx84 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[7].rotation_euler.x = rotx84
                     ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12641,10 +12641,10 @@ def ani_importV2(f):
                 while f.tell() < Size2281:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz84 = -unpack("<f", f.read(4))[0]
+                    rotz84 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.z = rotz84
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.y = rotz84
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn85,0)
@@ -12655,10 +12655,10 @@ def ani_importV2(f):
                 while f.tell() < Size2284:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty84 = -unpack("<f", f.read(4))[0]
+                    roty84 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[7].rotation_euler.y = roty84
-                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[7].rotation_euler.z = roty84
+                    ob.pose.bones[7].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn85,0)
@@ -12753,7 +12753,7 @@ def ani_importV2(f):
                 while f.tell() < Size2305:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx85 = -unpack("<f", f.read(4))[0]
+                    rotx85 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[8].rotation_euler.x = rotx85
                     ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12767,10 +12767,10 @@ def ani_importV2(f):
                 while f.tell() < Size2308:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz85 = -unpack("<f", f.read(4))[0]
+                    rotz85 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.z = rotz85
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.y = rotz85
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn86,0)
@@ -12781,10 +12781,10 @@ def ani_importV2(f):
                 while f.tell() < Size2311:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty85 = -unpack("<f", f.read(4))[0]
+                    roty85 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[8].rotation_euler.y = roty85
-                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[8].rotation_euler.z = roty85
+                    ob.pose.bones[8].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn86,0)
@@ -12879,7 +12879,7 @@ def ani_importV2(f):
                 while f.tell() < Size2332:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx86 = -unpack("<f", f.read(4))[0]
+                    rotx86 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[9].rotation_euler.x = rotx86
                     ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -12893,10 +12893,10 @@ def ani_importV2(f):
                 while f.tell() < Size2335:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz86 = -unpack("<f", f.read(4))[0]
+                    rotz86 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.z = rotz86
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.y = rotz86
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn87,0)
@@ -12907,10 +12907,10 @@ def ani_importV2(f):
                 while f.tell() < Size2338:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty86 = -unpack("<f", f.read(4))[0]
+                    roty86 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[9].rotation_euler.y = roty86
-                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[9].rotation_euler.z = roty86
+                    ob.pose.bones[9].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn87,0)
@@ -13005,7 +13005,7 @@ def ani_importV2(f):
                 while f.tell() < Size2359:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx87 = -unpack("<f", f.read(4))[0]
+                    rotx87 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[10].rotation_euler.x = rotx87
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -13019,10 +13019,10 @@ def ani_importV2(f):
                 while f.tell() < Size2362:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz87 = -unpack("<f", f.read(4))[0]
+                    rotz87 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.z = rotz87
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.y = rotz87
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn88,0)
@@ -13033,10 +13033,10 @@ def ani_importV2(f):
                 while f.tell() < Size2365:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty87 = -unpack("<f", f.read(4))[0]
+                    roty87 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.y = roty87
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[10].rotation_euler.z = roty87
+                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn88,0)
@@ -13131,7 +13131,7 @@ def ani_importV2(f):
                 while f.tell() < Size2386:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx88 = -unpack("<f", f.read(4))[0]
+                    rotx88 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[11].rotation_euler.x = rotx88
                     ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -13145,10 +13145,10 @@ def ani_importV2(f):
                 while f.tell() < Size2389:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz88 = -unpack("<f", f.read(4))[0]
+                    rotz88 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.z = rotz88
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.y = rotz88
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn89,0)
@@ -13159,10 +13159,10 @@ def ani_importV2(f):
                 while f.tell() < Size2392:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty88 = -unpack("<f", f.read(4))[0]
+                    roty88 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.y = roty88
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.z = roty88
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn89,0)
@@ -13257,7 +13257,7 @@ def ani_importV2(f):
                 while f.tell() < Size2413:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotx89 = -unpack("<f", f.read(4))[0]
+                    rotx89 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[12].rotation_euler.x = rotx89
                     ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
@@ -13271,10 +13271,10 @@ def ani_importV2(f):
                 while f.tell() < Size2416:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    rotz89 = -unpack("<f", f.read(4))[0]
+                    rotz89 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[12].rotation_euler.z = rotz89
-                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[12].rotation_euler.y = rotz89
+                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
             if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn90,0)
@@ -13285,10 +13285,10 @@ def ani_importV2(f):
                 while f.tell() < Size2419:
                     floatframe = unpack("<f", f.read(4))[0]
                     framerate = unpack("<f", f.read(4))[0]
-                    roty89 = -unpack("<f", f.read(4))[0]
+                    roty89 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[12].rotation_euler.y = roty89
-                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[12].rotation_euler.z = roty89
+                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
             if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn90,0)
@@ -13333,8 +13333,691 @@ def ani_importV2(f):
                     ob.pose.bones[12].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
         elif BoneCount == 14:
-            pass
+            posxOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn91 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
 
+            posxOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn92 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn93 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn94 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn95 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn96 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn97 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn98 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn99 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn100 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn101 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn102 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn103 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn104 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn91,0)
+                f.seek(-32,1)
+                Size2431 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2432 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2433 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2431:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.x = posx90
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn91,0)
+                f.seek(-32,1)
+                Size2434 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2435 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2436 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2434:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.y = posy90
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(poszOn91,0)
+                f.seek(-32,1)
+                Size2437 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2438 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2439 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2437:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].location.z = posz90
+                    ob.pose.bones[0].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn91,0)
+                f.seek(-32,1)
+                Size2440 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2441 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2442 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2440:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx90 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.x = rotx90
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn91,0)
+                f.seek(-32,1)
+                Size2443 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2444 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2445 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2443:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz90 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.y = rotz90
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn91,0)
+                f.seek(-32,1)
+                Size2446 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2447 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2448 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2446:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty90 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].rotation_euler.z = roty90
+                    ob.pose.bones[0].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn91,0)
+                f.seek(-32,1)
+                Size2449 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2450 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2451 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2449:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.x = sclx90
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn91,0)
+                f.seek(-32,1)
+                Size2452 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2453 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2454 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2452:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.y = scly90
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn91,0)
+                f.seek(-32,1)
+                Size2455 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2456 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2457 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2455:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz90 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[0].scale.z = sclz90
+                    ob.pose.bones[0].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn92,0)
+                f.seek(-32,1)
+                Size2458 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2459 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2460 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2458:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.x = posx91
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn92,0)
+                f.seek(-32,1)
+                Size2461 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2462 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2463 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2461:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.y = posy91
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(poszOn92,0)
+                f.seek(-32,1)
+                Size2464 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2465 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2466 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2464:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].location.z = posz91
+                    ob.pose.bones[1].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn92,0)
+                f.seek(-32,1)
+                Size2467 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2468 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2469 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2467:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx91 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.x = rotx91
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn92,0)
+                f.seek(-32,1)
+                Size2470 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2471 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2472 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2470:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz91 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.y = rotz91
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn92,0)
+                f.seek(-32,1)
+                Size2473 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2474 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2475 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2473:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty91 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].rotation_euler.z = roty91
+                    ob.pose.bones[1].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn92,0)
+                f.seek(-32,1)
+                Size2476 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2477 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2478 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2476:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.x = sclx91
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn92,0)
+                f.seek(-32,1)
+                Size2479 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2480 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2481 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2479:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.y = scly91
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn92,0)
+                f.seek(-32,1)
+                Size2482 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2483 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2484 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2482:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz91 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[1].scale.z = sclz91
+                    ob.pose.bones[1].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn93,0)
+                f.seek(-32,1)
+                Size2485 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2486 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2487 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2485:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.x = posx92
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn93,0)
+                f.seek(-32,1)
+                Size2488 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2489 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2490 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2488:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.y = posy92
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(poszOn93,0)
+                f.seek(-32,1)
+                Size2491 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2492 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2493 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2491:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].location.z = posz92
+                    ob.pose.bones[2].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn93,0)
+                f.seek(-32,1)
+                Size2494 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2495 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2496 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2494:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx92 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.x = rotx92
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn93,0)
+                f.seek(-32,1)
+                Size2497 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2498 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2499 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2497:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz92 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.y = rotz92
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn93,0)
+                f.seek(-32,1)
+                Size2500 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2501 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2502 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2500:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty92 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].rotation_euler.z = roty92
+                    ob.pose.bones[2].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn93,0)
+                f.seek(-32,1)
+                Size2503 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2504 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2505 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2503:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.x = sclx92
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn93,0)
+                f.seek(-32,1)
+                Size2506 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2507 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2508 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2506:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.y = scly92
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn93,0)
+                f.seek(-32,1)
+                Size2509 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2510 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2511 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2509:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz92 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[2].scale.z = sclz92
+                    ob.pose.bones[2].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn94,0)
+                f.seek(-32,1)
+                Size2512 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2513 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2514 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2512:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx93 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[3].location.x = posx93
+                    ob.pose.bones[3].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn94,0)
+                f.seek(-32,1)
+                Size2515 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2516 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size2517 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size2515:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy93 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[3].location.y = posy93
+                    ob.pose.bones[3].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
             
 
 def ani_importer_read(filepath, Boolean1V2=False, Boolean2V2=False, V1=False, V6=False):
