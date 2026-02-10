@@ -21845,7 +21845,7 @@ def ani_importV2(f):
                     sclx147 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[12].scale.x = sclx147
-                    ob.pose.bones[12].keyframe_insert(data_path="scale", index=, frame=int(floatframe))
+                    ob.pose.bones[12].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
 
             if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclyOn148,0)
@@ -22363,7 +22363,7 @@ def ani_importV2(f):
                     scly151 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
                     ob.pose.bones[16].scale.y = scly151
-                    ob.pose.bones[16].keyframe_insert(data_path="scale", index=, frame=int(floatframe))
+                    ob.pose.bones[16].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
 
             if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclzOn152,0)
