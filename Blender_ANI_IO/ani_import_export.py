@@ -22380,7 +22380,275 @@ def ani_importV2(f):
                     ob.pose.bones[16].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
         elif BoneCount == 18:
-            pass
+            posxOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn153 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn154 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn155 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn156 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn157 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn158 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn159 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn160 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn161 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn162 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn163 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn164 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn165 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn166 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn167 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn168 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn169 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            posxOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            posyOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            poszOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotxOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotyOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            rotzOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclxOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclyOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+            sclzOn170 = unpack("<I", f.read(4))[0] & max(0xFFFF,0)
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+
+            booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
+            booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz = unpack("B", f.read(1))[0]==True
 
             
 
