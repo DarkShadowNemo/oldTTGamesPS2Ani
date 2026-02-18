@@ -24028,7 +24028,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].location.y = posy162
                     ob.pose.bones[10].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
 
-            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(poszOn163,0)
                 f.seek(-32,1)
                 Size4381 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24042,7 +24042,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].location.z = posz162
                     ob.pose.bones[10].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
 
-            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotxOn163,0)
                 f.seek(-32,1)
                 Size4384 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24056,7 +24056,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].rotation_euler.x = rotx162
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
 
-            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotyOn163,0)
                 f.seek(-32,1)
                 Size4387 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24070,7 +24070,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].rotation_euler.y = rotz162
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
-            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn163,0)
                 f.seek(-32,1)
                 Size4390 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24084,7 +24084,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].rotation_euler.z = roty162
                     ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
-            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn163,0)
                 f.seek(-32,1)
                 Size4393 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24098,7 +24098,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].scale.x = sclx162
                     ob.pose.bones[10].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
 
-            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclyOn163,0)
                 f.seek(-32,1)
                 Size4396 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24112,7 +24112,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].scale.y = scly162
                     ob.pose.bones[10].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
 
-            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclzOn163,0)
                 f.seek(-32,1)
                 Size4399 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24126,7 +24126,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].scale.z = sclz162
                     ob.pose.bones[10].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
-            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posxOn164,0)
                 f.seek(-32,1)
                 Size4403 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24137,10 +24137,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posx163 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].location.x = posx163
-                    ob.pose.bones[10].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+                    ob.pose.bones[11].location.x = posx163
+                    ob.pose.bones[11].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
 
-            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posyOn164,0)
                 f.seek(-32,1)
                 Size4406 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24151,10 +24151,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posy163 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].location.y = posy163
-                    ob.pose.bones[10].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+                    ob.pose.bones[11].location.y = posy163
+                    ob.pose.bones[11].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
 
-            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(poszOn164,0)
                 f.seek(-32,1)
                 Size4409 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24165,10 +24165,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posz163 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].location.y = posz163
-                    ob.pose.bones[10].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+                    ob.pose.bones[11].location.y = posz163
+                    ob.pose.bones[11].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
 
-            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotxOn164,0)
                 f.seek(-32,1)
                 Size4412 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24179,10 +24179,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     rotx163 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.x = rotx163
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.x = rotx163
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
 
-            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotyOn164,0)
                 f.seek(-32,1)
                 Size4415 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24193,10 +24193,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     rotz163 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.y = rotz163
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.y = rotz163
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
-            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn164,0)
                 f.seek(-32,1)
                 Size4418 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24207,10 +24207,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     roty163 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].rotation_euler.z = roty163
-                    ob.pose.bones[10].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[11].rotation_euler.z = roty163
+                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
-            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn164,0)
                 f.seek(-32,1)
                 Size4421 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24224,7 +24224,7 @@ def ani_importV2(f):
                     ob.pose.bones[10].scale.x = sclx163
                     ob.pose.bones[10].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
 
-            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclyOn164,0)
                 f.seek(-32,1)
                 Size4424 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24235,10 +24235,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     scly163 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].scale.y = scly163
-                    ob.pose.bones[10].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+                    ob.pose.bones[11].scale.y = scly163
+                    ob.pose.bones[11].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
 
-            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclzOn164,0)
                 f.seek(-32,1)
                 Size4427 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24249,10 +24249,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     sclz163 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[10].scale.z = sclz163
-                    ob.pose.bones[10].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+                    ob.pose.bones[11].scale.z = sclz163
+                    ob.pose.bones[11].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
-            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posxOn165,0)
                 f.seek(-32,1)
                 Size4430 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24263,10 +24263,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posx164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].location.x = posx164
-                    ob.pose.bones[11].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+                    ob.pose.bones[12].location.x = posx164
+                    ob.pose.bones[12].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
 
-            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posyOn165,0)
                 f.seek(-32,1)
                 Size4433 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24277,10 +24277,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posy164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].location.y = posy164
-                    ob.pose.bones[11].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+                    ob.pose.bones[12].location.y = posy164
+                    ob.pose.bones[12].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
 
-            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(poszOn165,0)
                 f.seek(-32,1)
                 Size4436 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24291,10 +24291,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posz164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].location.z = posz164
-                    ob.pose.bones[11].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+                    ob.pose.bones[12].location.z = posz164
+                    ob.pose.bones[12].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
 
-            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotxOn165,0)
                 f.seek(-32,1)
                 Size4439 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24305,10 +24305,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     rotx164 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.x = rotx164
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+                    ob.pose.bones[12].rotation_euler.x = rotx164
+                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
 
-            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotyOn165,0)
                 f.seek(-32,1)
                 Size4442 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24319,10 +24319,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     rotz164 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.y = rotz164
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+                    ob.pose.bones[12].rotation_euler.y = rotz164
+                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
 
-            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(rotzOn165,0)
                 f.seek(-32,1)
                 Size4445 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24333,10 +24333,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     roty164 = +unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].rotation_euler.z = roty164
-                    ob.pose.bones[11].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+                    ob.pose.bones[12].rotation_euler.z = roty164
+                    ob.pose.bones[12].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
 
-            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclxOn165,0)
                 f.seek(-32,1)
                 Size4448 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24347,10 +24347,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     sclx164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].scale.x = sclx164
-                    ob.pose.bones[11].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+                    ob.pose.bones[12].scale.x = sclx164
+                    ob.pose.bones[12].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
 
-            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclyOn165,0)
                 f.seek(-32,1)
                 Size4451 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24361,10 +24361,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     scly164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].scale.y = scly164
-                    ob.pose.bones[11].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+                    ob.pose.bones[12].scale.y = scly164
+                    ob.pose.bones[12].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
 
-            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(sclzOn165,0)
                 f.seek(-32,1)
                 Size4454 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24375,10 +24375,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     sclz164 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[11].scale.z = sclz164
-                    ob.pose.bones[11].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+                    ob.pose.bones[12].scale.z = sclz164
+                    ob.pose.bones[12].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
 
-            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posxOn166,0)
                 f.seek(-32,1)
                 Size4457 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24389,10 +24389,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posx165 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[12].location.x = posx165
-                    ob.pose.bones[12].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+                    ob.pose.bones[13].location.x = posx165
+                    ob.pose.bones[13].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
 
-            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(posyOn166,0)
                 f.seek(-32,1)
                 Size4460 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24403,10 +24403,10 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posy165 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[12].location.y = posy165
-                    ob.pose.bones[12].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+                    ob.pose.bones[13].location.y = posy165
+                    ob.pose.bones[13].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
 
-            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
                 f.seek(poszOn166,0)
                 f.seek(-32,1)
                 Size4463 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
@@ -24417,8 +24417,358 @@ def ani_importV2(f):
                     framerate = unpack("<f", f.read(4))[0]
                     posz165 = unpack("<f", f.read(4))[0]
                     unk01 = unpack("<f", f.read(4))[0]
-                    ob.pose.bones[12].location.z = posz165
-                    ob.pose.bones[12].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+                    ob.pose.bones[13].location.z = posz165
+                    ob.pose.bones[13].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn166,0)
+                f.seek(-32,1)
+                Size4466 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4467 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4468 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4466:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx165 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].rotation_euler.x = rotx165
+                    ob.pose.bones[13].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn166,0)
+                f.seek(-32,1)
+                Size4469 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4470 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4471 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4469:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz165 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].rotation_euler.y = rotz165
+                    ob.pose.bones[13].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn166,0)
+                f.seek(-32,1)
+                Size4472 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4473 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4474 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4472:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty165 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].rotation_euler.z = roty165
+                    ob.pose.bones[13].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn166,0)
+                f.seek(-32,1)
+                Size4475 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4476 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4477 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4475:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx165 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].scale.x = sclx165
+                    ob.pose.bones[13].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn166,0)
+                f.seek(-32,1)
+                Size4478 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4479 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4480 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4478:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly165 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].scale.y = scly165
+                    ob.pose.bones[13].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn166,0)
+                f.seek(-32,1)
+                Size4481 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4482 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4483 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4481:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz165 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[13].scale.z = sclz165
+                    ob.pose.bones[13].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn167,0)
+                f.seek(-32,1)
+                Size4484 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4485 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4486 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4484:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].location.x = posx166
+                    ob.pose.bones[14].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn167,0)
+                f.seek(-32,1)
+                Size4487 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4488 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4489 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4487:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].location.y = posy166
+                    ob.pose.bones[14].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(poszOn167,0)
+                f.seek(-32,1)
+                Size4490 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4491 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4492 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4490:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].location.z = posz166
+                    ob.pose.bones[14].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn167,0)
+                f.seek(-32,1)
+                Size4493 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4494 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4495 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4493:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx166 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].rotation_euler.x = rotx166
+                    ob.pose.bones[14].keyframe_insert(data_path="rotation_euleer", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn167,0)
+                f.seek(-32,1)
+                Size4496 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4497 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4498 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4496:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz166 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].rotation_euler.y = rotz166
+                    ob.pose.bones[14].keyframe_insert(data_path="rotation_euleer", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn167,0)
+                f.seek(-32,1)
+                Size4499 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4500 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4501 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4499:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty166 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].rotation_euler.z = roty166
+                    ob.pose.bones[14].keyframe_insert(data_path="rotation_euleer", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn167,0)
+                f.seek(-32,1)
+                Size4502 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4503 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4504 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4502:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclx166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].scale.x = sclx166
+                    ob.pose.bones[14].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn167,0)
+                f.seek(-32,1)
+                Size4505 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4506 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4507 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4505:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].scale.y = scly166
+                    ob.pose.bones[14].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn167,0)
+                f.seek(-32,1)
+                Size4508 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4509 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4510 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4508:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz166 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[14].scale.z = sclz166
+                    ob.pose.bones[14].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn168,0)
+                f.seek(-32,1)
+                Size4511 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4512 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4513 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4511:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].location.x = posx167
+                    ob.pose.bones[15].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
+
+            if booleanPY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posyOn168,0)
+                f.seek(-32,1)
+                Size4514 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4515 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4516 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4514:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posy167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].location.y = posy167
+                    ob.pose.bones[15].keyframe_insert(data_path="location", index=1, frame=int(floatframe))
+
+            if booleanPZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(poszOn168,0)
+                f.seek(-32,1)
+                Size4517 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4518 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4519 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4517:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posz167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].location.z = posz167
+                    ob.pose.bones[15].keyframe_insert(data_path="location", index=2, frame=int(floatframe))
+
+            if booleanRX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotxOn168,0)
+                f.seek(-32,1)
+                Size4520 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4521 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4522 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4520:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotx167 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].rotation_euler.x = rotx167
+                    ob.pose.bones[15].keyframe_insert(data_path="rotation_euler", index=0, frame=int(floatframe))
+
+            if booleanRY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotyOn168,0)
+                f.seek(-32,1)
+                Size4523 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4524 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4525 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4523:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    rotz167 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].rotation_euler.y = rotz167
+                    ob.pose.bones[15].keyframe_insert(data_path="rotation_euler", index=1, frame=int(floatframe))
+
+            if booleanRZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(rotzOn168,0)
+                f.seek(-32,1)
+                Size4526 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4527 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4528 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4526:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    roty167 = +unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].rotation_euler.z = roty167
+                    ob.pose.bones[15].keyframe_insert(data_path="rotation_euler", index=2, frame=int(floatframe))
+
+            if booleanSX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclxOn168,0)
+                f.seek(-32,1)
+                Size4529 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4530 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4531 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4529:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sc;x167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].scale.x = sclx167
+                    ob.pose.bones[15].keyframe_insert(data_path="scale", index=0, frame=int(floatframe))
+
+            if booleanSY1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclyOn168,0)
+                f.seek(-32,1)
+                Size4532 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4533 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4534 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4532:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    scly167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].scale.y = scly167
+                    ob.pose.bones[15].keyframe_insert(data_path="scale", index=1, frame=int(floatframe))
+
+            if booleanSZ1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(sclzOn168,0)
+                f.seek(-32,1)
+                Size4535 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4536 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4537 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4535:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    sclz167 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[15].scale.z = sclz167
+                    ob.pose.bones[15].keyframe_insert(data_path="scale", index=2, frame=int(floatframe))
+
+            if booleanPX1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz > 0:
+                f.seek(posxOn169,0)
+                f.seek(-32,1)
+                Size4538 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4539 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                Size4540 = unpack("<I", f.read(4))[0]-32 & max(0xFFFF,0)
+                while f.tell() < Size4538:
+                    floatframe = unpack("<f", f.read(4))[0]
+                    framerate = unpack("<f", f.read(4))[0]
+                    posx168 = unpack("<f", f.read(4))[0]
+                    unk01 = unpack("<f", f.read(4))[0]
+                    ob.pose.bones[16].location.x = posx168
+                    ob.pose.bones[16].keyframe_insert(data_path="location", index=0, frame=int(floatframe))
 
             
 
